@@ -68,15 +68,15 @@ header {
 .navbar a:hover {
   text-decoration: underline;
 }
+/* ===== SECTION 1 : slider : site Les P’tits Escaladeurs ===== */
 .slider-wrapper {
   position: relative;
-  width: 80%;
   padding-top: 2rem;
   gap: 10px;
 }
 
 .slider-cadre {
-  border: 4px solid #ffb347;
+  border: 1px solid #ffb347;
   border-radius: 12px;
   overflow: hidden;
   background-color: #fffbe7;
@@ -147,16 +147,16 @@ justify-content: center;
   width: 100%;
   display: flex;
 transform: translateY(-50%);
-  padding: 0 15px;
- top: 50%;
-      left: 0;
-   justify-content: space-between;
-      z-index: 2;
-      pointer-events: none;
+padding: 0 15px;
+top: 50%;
+left: 0;
+justify-content: space-between;
+z-index: 2;
+pointer-events: none;
 }
 
 .arrow {
-      pointer-events: all;
+  pointer-events: all;
   font-size: 2rem;
   background: rgba(107, 105, 105, 0.5);
   color: #fff;
@@ -174,5 +174,266 @@ transform: translateY(-50%);
 
 .arrow:hover {
   background: rgba(0, 0, 0, 0.8);
+}
+
+.cta-section {
+  width: 100%;
+ 
+}
+
+.cta-container {
+  padding: 40px 20px;
+}
+
+.cta-container p {
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-inline: auto;
+  color: #333;
+  font-size: 14px;
+}
+
+.cta-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cta-input input[type="text"] {
+  padding: 10px 15px;
+  border: 2px solid #000;
+  font-size: 16px;
+  width: 250px;
+}
+
+.cta-input button {
+  background-color: #4FC3F7;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.cta-btn {
+  background-color: #FF6F00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  margin-top: 40px;
+}
+
+.cta-sketch {
+  background: url('/img/signature.png') no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.btn {
+  background-color: #4FC3F7;
+  color: white;
+  border: 2px solid #4FC3F7;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* ===== SECTION 3 : Description du site Les P’tits Escaladeurs ===== */
+.section-avantages {
+  padding: 4rem 2rem;
+  text-align: center;
+
+}
+
+.titre-section {
+  font-size: 2.8rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.intro-section {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.cartes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.carte {
+
+
+pointer-events: all;
+cursor: pointer;
+  padding: 2rem;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.carte:hover {
+  transform: scale(1.05);
+}
+
+.icone {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.carte h3 {
+  font-size: 1.4rem;
+  color: #2b2b2b;
+  margin-bottom: 0.5rem;
+}
+
+.carte p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+/* ============================= */
+/* SECTION 4 –  Galerie */
+/* galerie d’images */
+
+.galerie-section {
+  padding: 4rem 2rem;
+  background-color: #fcf4f4;
+  text-align: center;
+}
+
+
+
+.grille-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.grille-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.grille-images img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* SECTION 5 –   statistique */
+/* Statistique circulaire + texte ===  */
+/* ============================= */
+
+
+/* SECTION 6 –   equipe */
+/* flexbox ou grid ===  */
+
+.equipe-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f8f7;
+}
+
+.equipe-section h2 {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.equipe-section .intro {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  color: #666;
+}
+
+.equipe-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  border-left: 1px solid #ccc;
+}
+
+.membre {
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+
+}
+
+.membre img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.membre h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.membre .poste {
+  font-style: italic;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.membre p {
+  font-size: 0.95rem;
+  color: #444;
+}
+.equipe-container .membre {
+    text-align: left; /* Centre les membres */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    justify-content: left;
+    gap: 15px; 
+    margin-top: 10px;
+}
+
+.icon-social {
+   
+    width: 24px !important;
+    height: 24px !important;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: inline-block;
+
+}
+
+
+.icon-social:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
 
