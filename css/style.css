@@ -74,32 +74,38 @@ header {
 }
 
 .slider-cadre {
-  border: 1px solid #ffb347;
-  border-radius: 12px;
+ 
+  
   overflow: hidden;
-  background-color: #fffbe7;
+  background-color: #ffffff;
 }
 .slider {
-     gap:  30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   position: relative;
+  width: 100%;
+  height: 500px; /* hauteur fixe pour le slider */
+  overflow: hidden;
 }
 .images  {
- display: flex;
-  width: 300%;
+  display: flex;
+ 
   height: 100%;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
+  
 }
 .slide {
-  width: 100%;
-  flex-shrink: 0;
-  position: relative;
+ flex: 1 0 100%;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  height: 100%;
 }
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+   border: 1px solid #ffb347;
+  width: 80%;
+  height: 80%;
+  object-fit: cover
+
+
 }
 .slider input {
 display: none;
@@ -117,22 +123,23 @@ display: none;
 #image1:checked ~ .dots  label[for="image1"],
 #image2:checked ~ .dots  label[for="image2"],
 #image3:checked ~ .dots  label[for="image3"] {
-  background: #ffffff;
+  background: #ef9e75;
 }
 .dots {
-justify-content: center;
+  display: flex;
+  justify-content: center;
  position: absolute;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+
   gap: 5px;
 }
 
 .dots  label{
-  display: block;
-   height: 20px;
-   width: 20px;
+  display: inline-block;
+   height: 15px;
+   width: 15px;
    border-radius: 50%;
    cursor: pointer;
    transition: all 0.15s  ease;
@@ -141,8 +148,8 @@ justify-content: center;
 }
 .arrows {
   position: absolute;
-  top: 50%;
-  width: 100%;
+gap:20px;
+  width: 95% ;
   display: flex;
 transform: translateY(-50%);
 padding: 0 15px;
@@ -166,8 +173,8 @@ pointer-events: none;
   align-items: center;
   justify-content: center;
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 30px ;
+  height:30px ;
 }
 
 .arrow:hover {
@@ -343,7 +350,56 @@ cursor: pointer;
 /* SECTION 5 –   statistique */
 /* Statistique circulaire + texte ===  */
 /* ============================= */
+.statistiques {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.bloc-gauche, .bloc-droit {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.statistique-figure .cercle {
+  width: 300px ;
+  height: 300px ;
+  border-radius: 50%;
+  background-color: #a6eda1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
+.statistique-texte {
+  flex: 1;
+  min-width: 300px;
+}
+
+.statistique-texte h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.statistique-texte p {
+  font-size: 16px;
+  color: #444;
+}
+
+.sous-texte {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
 
 /* SECTION 6 –   equipe */
 /* flexbox ou grid ===  */
@@ -377,6 +433,9 @@ cursor: pointer;
   padding: 1rem;
   border-right: 1px solid #ccc;
 
+}
+.membre:last-child {
+  border-right: none;
 }
 
 .membre img {
@@ -533,3 +592,138 @@ cursor: pointer;
 .formulaire-contact button:hover {
   background-color: #e6574d;
 }
+
+
+.logo-section {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.breadcrumb {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo .breadcrumb img  {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.fil-ariane {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  font-size: 15px ;
+}
+
+
+
+
+
+.fil-ariane a {
+  text-decoration: none;
+  color: #61ba97;
+  text-decoration-line: underline;
+}
+
+
+
+/* code footer 
+*/
+
+.hr-footer
+ {
+  border:2px solid #959292;
+
+}
+footer {
+
+  color: #010101;
+  padding: 30px 20px;
+
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  flex: 1 1 200px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.social-media {
+  flex: 1 1 200px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.icon-social {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-social:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom-right {
+  flex: 1 1 200px;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.footer-bottom-right img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.footer-bottom-right a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.footer-bottom-right a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- */
+/* --------------- RESPONSIVE ---------------------- */
+/* ------------------------------------------------- */

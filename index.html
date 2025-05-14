@@ -13,24 +13,24 @@
       <div class="logo-titre">
     
                 <a href="#accueil">
-            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo" class="logo">
+            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo" class="logo" loading="lazy">
         </a>
-            <h1> Les P’tits Escaladeurs</h1>
+            <h1> 
+              Les P’tits Escaladeurs</h1>
       
         </div>
-    </div>
+
     <nav class="navbar">
       <ul>
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#activites">Nos Activités</a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a>Contact</li>
+        <li><a href="#inscription">Inscription</a></li>
+        <li><a href="#contact">Contact </a></li>
       </ul>
     </nav>
   </header>
   <main>
-  <section class="container slider-wrapper " id="accueil">
-
+  <div  class="container slider-wrapper" id="accueil">
       <div class="slider-cadre">
     <div class="slider">
    <!-- Boutons radio -->
@@ -40,39 +40,34 @@
           <!-- images -->
            <div class="images">
        <div class="slide s1">
-     <img src="img/boy-hanging-wall-lending-helping-hand-friend.jpg" alt="image 1">
-    
-    </div>
+     <img src="img/boy-hanging-wall-lending-helping-hand-friend.jpg" alt="image 1"  loading="lazy">
+       </div>
    <div class="slide s2"> 
-    <img src="img/n0yz_92m2_211230.jpg" alt="image 2">
-    
+    <img src="img/n0yz_92m2_211230.jpg" alt="image 2" loading="lazy">
 </div>
       <div class="slide s3"> 
-        <img src="img/2243.jpg" alt="image 3">
-    
+        <img src="img/2243.jpg" alt="image 3" loading="lazy">
      </div>
     
  </div>
- </div>
+
       <div class="arrows">
       <label for="image3" class="arrow" >&#10094;</label>
       <label for="image2" class="arrow" >&#10095;</label>
-      
     </div>
 
     <div class="dots">
         <label for="image1"></label>
         <label for="image2"></label>
         <label for="image3"></label>
-
     </div>
 </div>
-
-   
+   </div>
   <hr>
-  </section>
 
-<section class="cta-section">
+</div>
+
+<section class="cta-section" id="inscription">
   <div class="cta-container">
    <p>
       Rejoignez l’univers coloré des <strong>P’tits Escaladeurs</strong> ! 
@@ -80,13 +75,15 @@
     </p>
     <div class="cta-input">
       <input type="text" placeholder="Entrez votre courriel">
-      <button>S'inscrire</button>
+      <button  role="button" tabindex="0" aria-pressed="false">  S'inscrire</button>
+
     </div>
   </div>
 
   <div class="cta-btn">
     <div class="cta-sketch"></div>
-    <button class="btn">Réserver une séance</button>
+    <button class="btn"   role="button" tabindex="0" aria-pressed="false"> Réserver une séance</button>
+ 
   </div>
 </section>
 <!-- SECTION 3 : Description du site Les P’tits Escaladeurs -->
@@ -101,17 +98,17 @@
 
     <div class="cartes">
       <div class="carte">
-        <img src="img/jeux.png" alt="Aire de jeu escalade" class="icone">
+        <img src="img/jeux.png" alt="Aire de jeu escalade" class="icone"loading="lazy">
         <h3>Parcours amusants</h3>
         <p>Des murs adaptés à chaque âge avec des défis rigolos pour explorer en toute sécurité.</p>
       </div>
       <div class="carte">
-        <img src="img/mountain.png" alt="Encadrement enfants" class="icone">
+        <img src="img/mountain.png" alt="Encadrement enfants" class="icone" loading="lazy">
         <h3>Encadrement expert</h3>
         <p>Nos animateurs spécialisés veillent à la sécurité et à l’amusement de vos enfants à chaque instant.</p>
       </div>
       <div class="carte">
-        <img src="img/party-hat.png" alt="Événements" class="icone">
+        <img src="img/party-hat.png" alt="Événements" class="icone"loading="lazy">
         <h3>Anniversaires & événements</h3>
         <p>Fêtez des moments inoubliables en hauteur avec nos formules d’anniversaires originales !</p>
        
@@ -123,6 +120,7 @@
 
 
 </section>
+
 <section class=" galerie-section">
   <div class="grille-images">
     <img src="img/2200.jpg" alt="Enfant escaladant un mur coloré">
@@ -134,19 +132,36 @@
   </div>
 </section>
 
-<section>
-
+<section class="statistiques">
+  <div class="statistique-figure">
+     <div class="bloc-gauche">
+    <div class="cercle">
+      <strong>44M</strong>
+    </div>
+  </div>
+</div>
+ <div class="bloc-droit">
+ <div class="statistique-texte">
+    <h2>Des statistiques </h2>
+    <p>Chez <strong>Les P’tits Escaladeurs</strong>, chaque mur grimpé est une petite victoire.
+       Voici quelques chiffres étonnants qui montrent à quel point nos jeunes grimpeurs sont actifs !</p>
+       <h3>    44 M  </h3> 
+    <div class="sous-texte">Vendu pour   </div>
+    <button class="btn">Voir plus  </button>
+  </div>
+  </div>
 </section>
+
 </section>
 <!-- SECTION  :  Équipe  du site Les P’tits Escaladeurs -->
 <!-- Cette section présente notre univers, les valeurs du site et ce que les enfants peuvent y découvrir -->
 
 <section class="equipe-section">
-  <h2> Notre Équipe </h2>
+  <h2>Notre Équipe</h2>
   <p class="intro">Une équipe passionnée au service de vos petits grimpeurs !</p>
   <div class="equipe-container">
     <div class="membre">
-      <img src="img/Capture d’écran 2025-05-13 031432.png" alt="Photo Animateurice ">
+      <img src="img/Capture d’écran 2025-05-13 031432.png" alt="Photo Animateurice " loading="lazy">
       <h3>Emma Dubois</h3>
       <p class="poste">Animatrice principale</p>
       <p>Spécialisée en escalade pour les tout-petits, elle accompagne les enfants avec douceur et énergie.</p>
@@ -157,7 +172,7 @@
     </div>
   </div>
     <div class="membre">
-      <img src="img/Capture d’écran 2025-05-13 031332.png" alt="Photo Coach">
+      <img src="img/Capture d’écran 2025-05-13 031332.png" alt="Photo Coach" loading="lazy">
       <h3>Jean  Martin</h3>
       <p class="poste">Coach sportif</p>
       <p>Passionné de sport, il veille à la sécurité et au plaisir dans chaque activité.</p>
@@ -169,7 +184,7 @@
     </div>
 
     <div class="membre">
-      <img src="img/Capture d’écran 2025-05-13 031357.png" alt="Photo Responsable">
+      <img src="img/Capture d’écran 2025-05-13 031357.png" alt="Photo Responsable" loading="lazy">
       <h3>Sarah  Eric</h3>
       <p class="poste">Responsable accueil</p>
       <p>Elle vous reçoit avec le sourire et répond à toutes vos questions.</p>
@@ -181,7 +196,7 @@
     </div>
 
     <div class="membre">
-      <img src="img/Capture d’écran 2025-05-13 031255.png" alt="Photo  Moniteur">
+      <img src="img/Capture d’écran 2025-05-13 031255.png" alt="Photo  Moniteur" loading="lazy">
       <h3>Jack Roy</h3>
       <p class="poste">Moniteur d’escalade</p>
       <p>Il encadre les enfants dans la découverte de l’escalade en toute sécurité.</p>
@@ -196,7 +211,7 @@
 </section>
 
 <section class="map-form-section">
-  <!-- Carte en arrière-plan -->
+
   <iframe
     class="map-background"
     src="https://www.google.com/maps?q=45.505673276192276,-73.54846486153355&hl=fr&z=15&output=embed"
@@ -205,13 +220,13 @@
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 
-  <!-- Formulaire affiché par-dessus à droite -->
-  <div class="formulaire-contact">
+
+  <div class="formulaire-contact" id="contact">
   <h2>Contactez-nous</h2>
  <p>Remplissez ce formulaire pour toute question ou information concernant nos cours d'escalade pour enfants. </p>
   <form id="contactForm">
     
-    <!-- Nom + Prénom côte à côte -->
+
     <div class="ligne-nom-prenom">
       <input type="text" id="nom" placeholder="Nom de famille " required>
       <input type="text" id="prenom" placeholder="Prénom" required>
@@ -226,18 +241,15 @@
 
     <button type="submit">Envoyer</button>
   </form>
+ 
 </div>
 
 </section>
 
-<section>
 
-</section>
 
- <!-- Footer -->
-<footer>
-  
-</footer>
+
+
 
 
 
