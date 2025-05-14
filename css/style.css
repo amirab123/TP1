@@ -7,9 +7,7 @@
 
 } 
 
-h1, h2, h3 ,h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-}
+
 
 body {
 background-color:#ffffff;
@@ -372,7 +370,7 @@ cursor: pointer;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  border-left: 1px solid #ccc;
+
 }
 
 .membre {
@@ -406,7 +404,7 @@ cursor: pointer;
   color: #444;
 }
 .equipe-container .membre {
-    text-align: left; /* Centre les membres */
+    text-align: left; 
     margin-bottom: 20px;
 }
 
@@ -437,3 +435,101 @@ cursor: pointer;
   filter: brightness(1.2);
 }
 
+
+
+/* SECTION  –   Map  */
+/* carte ou formulaire  ===  */
+.map-form-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Carte en background */
+.map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: brightness(0.7); /* assombrit la carte pour mettre en valeur le formulaire */
+  z-index: 0;
+}
+
+/* Bloc formulaire  */
+
+
+.formulaire-contact {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.formulaire-contact p {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 10px;
+}
+.ligne-nom-prenom {
+  display: flex;
+  gap: 1rem;
+}
+
+.ligne-nom-prenom input {
+  flex: 1;
+ 
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.5rem;
+
+  width: 150px;
+
+  padding: 8px;
+  font-size: 16px;
+
+}
+.formulaire-contact h2 {
+  margin-bottom: 1rem;
+  color: #ff6f61;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.formulaire-contact form {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulaire-contact input,
+.formulaire-contact textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.formulaire-contact button {
+  padding: 1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.formulaire-contact button:hover {
+  background-color: #e6574d;
+}
