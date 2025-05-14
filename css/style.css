@@ -565,19 +565,31 @@ cursor: pointer;
 }
 
 .formulaire-contact form {
-  
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: column;}
+  .formulaire-contact textarea {
+    width: 100%;
+    padding: 10px;;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+
+.formulaire-contact input {
+  border: 2px solid #f0f0f0;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
+}
+.formulaire-contact input:focus {
+  outline: 0;
 }
 
-.formulaire-contact input,
-.formulaire-contact textarea {
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
 
 .formulaire-contact button {
   padding: 1rem;
@@ -592,6 +604,48 @@ cursor: pointer;
 .formulaire-contact button:hover {
   background-color: #e6574d;
 }
+
+.ligne-nom-prenom.success input {
+  border-color: #09c372;
+}
+.ligne-nom-prenom.error input {
+  border-color: #ff3860;
+}
+
+.ligne-nom-prenom.errormessage
+{
+  color: #ff3860;
+  font-size: 10px;
+  height: 15px;
+
+}
+.ligne-nom-prenom.success.errormessage {
+color:#09c372;
+font-size: 10px;
+height: 15px;
+
+}
+
+.formulaire-contact.errormessage input , textarea
+{
+  color: #ff3860;
+  font-size: 10px;
+  height: 15px;
+
+}
+.formulaire-contact.success.errormessage  input , textarea {
+color:#09c372;
+font-size: 10px;
+height: 15px;
+
+}
+
+
+
+
+
+
+
 
 
 .logo-section {

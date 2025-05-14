@@ -224,22 +224,24 @@
   <div class="formulaire-contact" id="contact">
   <h2>Contactez-nous</h2>
  <p>Remplissez ce formulaire pour toute question ou information concernant nos cours d'escalade pour enfants. </p>
-  <form id="contactForm">
+  <form id="contactForm" onsubmit="return  validateInputs()" novalidate>
     
-
     <div class="ligne-nom-prenom">
+      <label for="nom"></label>
       <input type="text" id="nom" placeholder="Nom de famille " required>
+      <label for="prenom"></label>
       <input type="text" id="prenom" placeholder="Prénom" required>
+      <div class="errormessage"></div>
     </div>
 
-  
+    <label for="email"></label>
     <input type="email" id="email" placeholder="Email" required>
-
-   
+    <div class="errormessage"></div>
+    <label for="message"></label>
     <textarea id="message" placeholder="Votre message" required></textarea>
+    <div class="errormessage"></div>
 
-
-    <button type="submit">Envoyer</button>
+    <button type="submit" >Envoyer</button>
   </form>
  
 </div>
@@ -301,5 +303,6 @@
 
 
   </main>
+  <script src="script/validation.js"></script>
 </body>
 </html>
