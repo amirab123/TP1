@@ -33,6 +33,7 @@ const msg = document.getElementById("message");
       
           if (nomValue === "") {
               setError(nom, 'nom  est requis ');
+            
               noError=false;
           } 
       
@@ -57,10 +58,13 @@ const msg = document.getElementById("message");
         }
             if (emailValue === "") {
               setError(email, " L'email est requis  !");
+              console.log(email);
               noError = false;
             }
             else if (!isValidEmail(emailValue)) {
               setError(email, 'Adresse email incorrecte. Veuillez réessayer');
+              console.log(email);
+              console.log('Adresse email incorrecte. Veuillez réessayer');
           }
             else {
               setSuccess(email);

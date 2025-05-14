@@ -523,10 +523,10 @@ cursor: pointer;
 .formulaire-contact {
   position: relative;
   z-index: 1;
-  max-width: 400px;
+  max-width: 500px;
   margin-left: auto;
-  margin-right: 2rem;
-  padding: 2rem;
+  margin-right: 1rem;
+  padding: 1rem;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -563,43 +563,45 @@ cursor: pointer;
   font-size: 1.5rem;
   text-align: left;
 }
-
+.formulaire-contact label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
 .formulaire-contact form {
+ 
   display: flex;
-  flex-direction: column;}
-  .formulaire-contact textarea {
-    width: 100%;
-    padding: 10px;;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
   
 
-.formulaire-contact input {
-  border: 2px solid #f0f0f0;
-  margin-bottom: 15px;
-  border-radius: 4px;
-  display: block;
-  font-size: 12px;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  gap: 10px;
+.formulaire-contact input,
+.formulaire-contact textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 .formulaire-contact input:focus {
   outline: 0;
 }
-
-
 .formulaire-contact button {
-  padding: 1rem;
+ 
+
+  padding: 0.5rem 1rem;          
   background-color: #ff6f61;
   color: white;
   border: none;
   border-radius: 8px;
-  width: 100px;
+  font-size: 0.9rem;           
   cursor: pointer;
+  align-self: flex-start; 
 }
+
+
 
 .formulaire-contact button:hover {
   background-color: #e6574d;
@@ -611,29 +613,44 @@ cursor: pointer;
 .ligne-nom-prenom.error input {
   border-color: #ff3860;
 }
-
-.ligne-nom-prenom.errormessage
+.ligne-nom-prenom .errormessage
 {
   color: #ff3860;
   font-size: 10px;
   height: 15px;
 
 }
-.ligne-nom-prenom.success.errormessage {
+.ligne-nom-prenom.success .errormessage {
 color:#09c372;
 font-size: 10px;
 height: 15px;
 
 }
 
-.formulaire-contact.errormessage input , textarea
+.champ-formulaire {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
+}
+.champ-formulaire.success input,
+.champ-formulaire.success textarea {
+  border-color: #09c372;
+}
+
+.champ-formulaire.error input,
+.champ-formulaire.error textarea {
+  border-color: #ff3860;
+}
+.champ-formulaire .errormessage
 {
   color: #ff3860;
   font-size: 10px;
   height: 15px;
 
 }
-.formulaire-contact.success.errormessage  input , textarea {
+.champ-formulaire.success .errormessage {
 color:#09c372;
 font-size: 10px;
 height: 15px;
