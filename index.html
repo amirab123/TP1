@@ -20,6 +20,8 @@
       
         </div>
 
+  <!-- Menu burger (visible  mobile 500) -->
+  <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
     <nav class="navbar">
       <ul>
         <li><a href="#accueil">Accueil</a></li>
@@ -121,21 +123,26 @@
 
 </section>
 
-<section class=" galerie-section">
-  <div class="grille-images">
-    <img src="img/2200.jpg" alt="Enfant escaladant un mur coloré">
-    <img src="img/woman-rock-climbing-indoors-arena.jpg" alt="Atelier d’escalade pour enfants">
-    <img src="img/portrait-cartoon-sports-team.jpg" alt="Fête d’anniversaire dans la salle">
-    <img src="img/man-bouldering-spot.jpg" alt="Parcours d’escalade adapté">
-    <img src="img/Les_P_tits_Escaladeurs__1_-removebg-preview.png" alt="Encadrement par un animateur">
-    <img src="img/climbing.png" alt="Zone de jeux ludique">
-  </div>
+
+
+
+    <section class="galerie">
+  <div class="item item1"><img src="img/2200.jpg" alt="Enfant escaladant un mur coloré"></div>
+  <div class="item item2"><img src="img/woman-rock-climbing-indoors-arena.jpg" alt="Atelier d’escalade pour enfants"></div>
+  <div class="item item3"><img src="img/portrait-cartoon-sports-team.jpg" alt="Fête d’anniversaire dans la salle"></div>
+  <div class="item item4"><img src="img/fhhx_qvpk_220222.jpg" alt="Atelier d’escalade"></div>
+  <div class="item item5"><img src="img/man-bouldering-spot.jpg" alt="escalade "></div>
+  <div class="item item6"><img src="img/mother-daughter-rock-climbing-together-indoors-arena (1).jpg" alt="Encadrement par un animateur"></div>
+
 </section>
+
+ 
 
 <section class="statistiques">
   <div class="statistique-figure">
      <div class="bloc-gauche">
     <div class="cercle">
+      
       <strong>44M</strong>
     </div>
   </div>
@@ -145,14 +152,35 @@
     <h2>Des statistiques </h2>
     <p>Chez <strong>Les P’tits Escaladeurs</strong>, chaque mur grimpé est une petite victoire.
        Voici quelques chiffres étonnants qui montrent à quel point nos jeunes grimpeurs sont actifs !</p>
-       <h3>    44 M  </h3> 
-    <div class="sous-texte">Vendu pour   </div>
-    <button class="btn">Voir plus  </button>
+     <div class="statistiques-flex">
+      <div>
+      
+        <div class="stat">
+    <h2>44M</h2>
+    <p>Vendu pour</p>
   </div>
+    
+        
+      </div>
+        <button class="btn">Voir plus</button>
+      <div>
+          
+        <div class="stat">
+    <h2>328 B</h2>
+    <p>Support disponible</p>
   </div>
+    
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  <hr class="container">
 </section>
 
-</section>
+
 <!-- SECTION  :  Équipe  du site Les P’tits Escaladeurs -->
 <!-- Cette section présente notre univers, les valeurs du site et ce que les enfants peuvent y découvrir -->
 
@@ -208,6 +236,7 @@
 </div>
    </div>
   </div>
+    <hr class="container">
 </section>
 
 <section class="map-form-section">
@@ -252,13 +281,15 @@
   </form>
  
 </div>
-
+  <hr class="container">
 </section>
 
 <section>
-  <hr class="container">
+
+
 
    <div class="logo-section">
+     <hr class="hr-map">
     <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="logo du site" class="logo" loading="lazy">
   </div>
 <div class="breadcrumb">
@@ -276,7 +307,7 @@
 </div>
 
 
-
+ 
 </section>
   <hr class="container hr-footer">
  <!-- Footer -->
@@ -310,6 +341,6 @@
 
 
   </main>
-  <script src="script/validation.js"></script>
+  <script src="script/validation.js" defer></script>
 </body>
 </html>

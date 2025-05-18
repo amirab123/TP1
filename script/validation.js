@@ -125,3 +125,22 @@ const isMessageTooLong = message => {
 
   return message.length >= 1000;
 };
+
+
+   // Accessibilité : activer le menu
+
+const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".navbar");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+
+   
+    const isExpanded = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", !isExpanded);
+  });
+
+   // Accessibilité : activer le menu chart 
+
+document.querySelector('.circle').setAttribute('stroke-dasharray', '75, 100'); // 50%
+document.querySelector('.percentage').textContent = '75%';
