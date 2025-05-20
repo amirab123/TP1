@@ -9,11 +9,11 @@
 </head>
 <body>
     <header>
-  
+    <!-- header  -->
       <div class="logo-titre">
     
                 <a href="#accueil">
-            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo" class="logo" loading="lazy">
+            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo site " class="logo" loading="lazy">
         </a>
             <h1> 
               Les P’tits Escaladeurs</h1>
@@ -21,8 +21,9 @@
         </div>
 
   <!-- Menu burger (visible  mobile 500) -->
-  <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-    <nav class="navbar">
+  <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"  aria-controls="nav-principale">☰</button>
+  
+    <nav class="navbar" id="nav-principale" role=“navigation”>
       <ul>
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#activites">Nos Activités</a></li>
@@ -36,32 +37,41 @@
       <div class="slider-cadre">
     <div class="slider">
    <!-- Boutons radio -->
-        <input type="radio"   name="slider" id="image1" checked>
-        <input type="radio"  name="slider" id="image2">
-        <input type="radio"  name="slider" id="image3">
-          <!-- images -->
+      <input type="radio"   name="slider" id="image1"  checked>
+      <input type="radio"  name="slider" id="image2">
+      <input type="radio"  name="slider" id="image3">
+        <!-- FIELDSET contenant uniquement les labels -->
+     <fieldset class="visually-hidden">
+
+        <legend class="visually-hidden">Choisissez une image</legend>
+
+        <label for="image1" class="visually-hidden">Image 1</label>
+        <label for="image2" class="visually-hidden">Image 2</label>
+        <label for="image3" class="visually-hidden">Image 3</label>
+     </fieldset>
+              <!-- Images du slider -->
            <div class="images">
        <div class="slide s1">
-     <img src="img/boy-hanging-wall-lending-helping-hand-friend.jpg" alt="image 1"  loading="lazy">
-       </div>
+     <img src="img/boy-hanging-wall-lending-helping-hand-friend.jpg" alt="image 1"  loading="lazy">    </div>
+   
    <div class="slide s2"> 
-    <img src="img/n0yz_92m2_211230.jpg" alt="image 2" loading="lazy">
-</div>
+    <img src="img/n0yz_92m2_211230.jpg" alt="image 2" loading="lazy"> </div>
+
       <div class="slide s3"> 
-        <img src="img/2243.jpg" alt="image 3" loading="lazy">
-     </div>
+        <img src="img/2243.jpg" alt="image 3" loading="lazy">   </div>
+   
     
  </div>
 
       <div class="arrows">
-      <label for="image3" class="arrow" >&#10094;</label>
-      <label for="image2" class="arrow" >&#10095;</label>
+      <label for="image3" class="arrow"  aria-label="Afficher  image 3">&#10094;</label>
+      <label for="image2" class="arrow" aria-label="Afficher image 2">&#10095;</label>
     </div>
 
-    <div class="dots">
-        <label for="image1"></label>
-        <label for="image2"></label>
-        <label for="image3"></label>
+    <div class="dots" aria-label="Navigation par points">
+        <label for="image1" aria-label="Afficher  slider image 1"></label>
+        <label for="image2" aria-label="Afficher slider image 2"></label>
+        <label for="image3" aria-label="Afficher slider image 3"></label>
     </div>
 </div>
    </div>
@@ -76,15 +86,15 @@
       Des parcours ludiques, des murs adaptés à tous les niveaux et une équipe passionnée pour encadrer vos enfants en toute sécurité.
     </p>
     <div class="cta-input">
-      <input type="text" placeholder="Entrez votre courriel">
-      <button  role="button" tabindex="0" aria-pressed="false">  S'inscrire</button>
+      <input type="text" placeholder="Entrez votre courriel" aria-label="Adresse courriel">
+      <button  role="button" tabindex="0" aria-pressed="false"  aria-label="S'inscrire à la newsletter">  S'inscrire</button>
 
     </div>
   </div>
 
   <div class="cta-btn">
-    <div class="cta-sketch"></div>
-    <button class="btn"   role="button" tabindex="0" aria-pressed="false"> Réserver une séance</button>
+    <div class="cta-sketch"  aria-hidden="true" ></div>
+    <button class="btn"   role="button" tabindex="0" aria-pressed="false"  aria-label="Réserver une séance d'escalade"> Réserver une séance</button>
  
   </div>
 </section>
@@ -127,55 +137,49 @@
 
 
     <section class="galerie">
-  <div class="item item1"><img src="img/2200.jpg" alt="Enfant escaladant un mur coloré"></div>
-  <div class="item item2"><img src="img/woman-rock-climbing-indoors-arena.jpg" alt="Atelier d’escalade pour enfants"></div>
-  <div class="item item3"><img src="img/portrait-cartoon-sports-team.jpg" alt="Fête d’anniversaire dans la salle"></div>
-  <div class="item item4"><img src="img/fhhx_qvpk_220222.jpg" alt="Atelier d’escalade"></div>
-  <div class="item item5"><img src="img/man-bouldering-spot.jpg" alt="escalade "></div>
-  <div class="item item6"><img src="img/mother-daughter-rock-climbing-together-indoors-arena (1).jpg" alt="Encadrement par un animateur"></div>
+  <div class="item item1"><img src="img/2200.jpg" alt="Enfant escaladant un mur coloré" loading="lazy"></div>
+  <div class="item item2"><img src="img/woman-rock-climbing-indoors-arena.jpg" alt="Atelier d’escalade pour enfants" loading="lazy"></div>
+  <div class="item item3"><img src="img/portrait-cartoon-sports-team.jpg" alt="Fête d’anniversaire dans la salle"loading="lazy"></div>
+  <div class="item item4"><img src="img/fhhx_qvpk_220222.jpg" alt="Atelier d’escalade" loading="lazy"></div>
+  <div class="item item5"><img src="img/man-bouldering-spot.jpg" alt="escalade " loading="lazy"></div>
+  <div class="item item6"><img src="img/mother-daughter-rock-climbing-together-indoors-arena (1).jpg" alt="Encadrement par un animateur" loading="lazy"></div>
 
 </section>
 
  
 
-<section class="statistiques">
+<section class="container statistiques">
   <div class="statistique-figure">
      <div class="bloc-gauche">
-    <div class="cercle">
-      
-      <strong>44M</strong>
-    </div>
+      <div class="gradient-section">
+  <div class="gradient-circle">
+  </div>
+      </div>
+   
+  
   </div>
 </div>
  <div class="bloc-droit">
  <div class="statistique-texte">
     <h2>Des statistiques </h2>
-    <p>Chez <strong>Les P’tits Escaladeurs</strong>, chaque mur grimpé est une petite victoire.
+    <p>Chez <strong>Les P’tits Escaladeurs</strong>, chaque mur grimpé est une petite victoire. 
+      <br>
        Voici quelques chiffres étonnants qui montrent à quel point nos jeunes grimpeurs sont actifs !</p>
      <div class="statistiques-flex">
-      <div>
-      
         <div class="stat">
-    <h2>44M</h2>
-    <p>Vendu pour</p>
-  </div>
-    
-        
-      </div>
-        <button class="btn">Voir plus</button>
-      <div>
-          
+           <h2>44M</h2>
+          <p> Vendu pour </p>
+     <button class="btn" role="button" tabindex="0" aria-pressed="false" >Voir plus</button>
+      </div> 
+   
         <div class="stat">
     <h2>328 B</h2>
     <p>Support disponible</p>
   </div>
-    
       </div>
     </div>
   </div>
 
-
-</div>
 
   <hr class="container">
 </section>
@@ -194,9 +198,9 @@
       <p class="poste">Animatrice principale</p>
       <p>Spécialisée en escalade pour les tout-petits, elle accompagne les enfants avec douceur et énergie.</p>
   <div class="social-icons">
-  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-social"></a>
-  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-social"></a>
-    <a href="#"><img src="img/instagram.png"  alt="instagram"  class="icon-social"></a>
+  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-socials" loading="lazy"></a>
+  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-socials" loading="lazy"></a>
+    <a href="#"><img src="img/instagram.png"  alt="instagram"  class="icon-socials" loading="lazy"></a>
     </div>
   </div>
     <div class="membre">
@@ -205,34 +209,34 @@
       <p class="poste">Coach sportif</p>
       <p>Passionné de sport, il veille à la sécurité et au plaisir dans chaque activité.</p>
    <div class="social-icons">
-  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-social"></a>
-  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-social"></a>
-    <a href="#"><img src="img/instagram.png"  alt="instagram"  class="icon-social"></a>
+  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-socials"loading="lazy"></a>
+  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-socials" loading="lazy"></a>
+    <a href="#"><img src="img/instagram.png"  alt="instagram"  class="icon-socials" loading="lazy"></a>
 </div>
     </div>
 
     <div class="membre">
-      <img src="img/Capture d’écran 2025-05-13 031357.png" alt="Photo Responsable" loading="lazy">
+      <img src="img/Capture d’écran 2025-05-13 031421.png" alt="Photo Responsable" loading="lazy">
       <h3>Sarah  Eric</h3>
       <p class="poste">Responsable accueil</p>
       <p>Elle vous reçoit avec le sourire et répond à toutes vos questions.</p>
         <div class="social-icons">
-  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-social"></a>
-  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-social"></a>
-    <a href="#"><img src="img/instagram.png"  alt="instagram"  class="icon-social"></a>
+  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-socials" loading="lazy"></a>
+  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-socials" loading="lazy"></a>
+    <a href="#"><img src="img/instagram.png"  alt="instagram"  class="icon-socials" loading="lazy"></a>
 </div>
     </div>
 
     <div class="membre">
-      <img src="img/Capture d’écran 2025-05-13 031255.png" alt="Photo  Moniteur" loading="lazy">
+      <img src="img/Capture d’écran 2025-05-13 031357.png" alt="Photo  Moniteur" loading="lazy">
       <h3>Jack Roy</h3>
       <p class="poste">Moniteur d’escalade</p>
       <p>Il encadre les enfants dans la découverte de l’escalade en toute sécurité.</p>
  
     <div class="social-icons">
-  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-social"></a>
-  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-social"></a>
-    <a href="#"><img src="img/instagram.png"   alt="instagram"    class="icon-social"></a>
+  <a href="#"><img src="img/facebook.png" alt="Facebook" class="icon-socials" loading="lazy"></a>
+  <a href="#"><img src="img/twitter.png" alt="twitter" class="icon-socials" loading="lazy"></a>
+    <a href="#"><img src="img/instagram.png"   alt="instagram"    class="icon-socials" loading="lazy"></a>
 </div>
    </div>
   </div>
@@ -253,41 +257,41 @@
   <div class="formulaire-contact" id="contact">
   <h2>Contactez-nous</h2>
  <p>Remplissez ce formulaire pour toute question ou information concernant nos cours d'escalade pour enfants. </p>
-  <form id="contactForm" onsubmit="return  validateInputs()" novalidate>
+  <form id="contactForm"  aria-labelledby="form-inscription"  onsubmit="return  validateInputs()" novalidate>
     <div class="ligne-nom-prenom">
       <div class="champ-formulaire">
-        <label for="nom"></label>
-        <input type="text" id="nom" placeholder="Nom" required>
-        <div class="errormessage"></div>
+        <label for="nom" class="visually-hidden" >Nom  :</label>
+        <input type="text" id="nom" placeholder="Nom" required  aria-describedby="nom-error">
+        <div class="errormessage" id="nom-error" aria-live="polite"></div>
       </div>
       <div class="champ-formulaire">
-        <label for="prenom"></label>
-        <input type="text" id="prenom" placeholder="Prénom" required>
-        <div class="errormessage"></div>
+        <label for="prenom" class="visually-hidden"> prenom : </label>
+        <input type="text" id="prenom" placeholder="Prénom" required aria-describedby="prenom-error">
+        <div class="errormessage" id="prenom-error" aria-live="polite"></div>
       </div>
     </div>
     
     <div class="champ-formulaire">
-    <label for="email"></label>
+    <label for="email" class="visually-hidden">Email :</label>
     <input type="email" id="email" placeholder="Email" required>
-    <div class="errormessage"></div>
+    <div class="errormessage"  id="email-error" aria-live="polite" ></div>
     </div>
     <div class="champ-formulaire">
-    <label for="message"></label>
-    <textarea id="message" placeholder="Votre message" required></textarea>
-    <div class="errormessage"></div>
+    <label for="message" class="visually-hidden">Message :</label>
+    <textarea id="message" placeholder="Votre message" required aria-describedby="message-error"></textarea>
+    <div class="errormessage" id="message-error" aria-live="polite"></div>
   </div>
-    <button type="submit" >Envoyer</button>
+    <button type="submit"  aria-label="Envoyer" >Envoyer</button>
   </form>
  
 </div>
   <hr class="container">
 </section>
 
+
+
+
 <section>
-
-
-
    <div class="logo-section">
      <hr class="hr-map">
     <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="logo du site" class="logo" loading="lazy">
@@ -312,19 +316,16 @@
   <hr class="container hr-footer">
  <!-- Footer -->
 <footer class="container">
-
   <div class="footer-top">
     <div class="author">
       Fait Par : <strong>Amira Belgharat </strong>
     </div>
-
     <div class="social-media">
       <img src="img/facebook.png" alt="facebook" class="icon-social" loading="lazy">
-      <img src="img/linkedin.png" alt="linkedin" class="icon-social" loading="lazy">
+      <img src="img/logolinkedin.png" alt="linkedin"  class="icon-social" loading ="lazy">
       <img src="img/instagram.png" alt="instagram" class="icon-social" loading="lazy">
       <img src="img/twitter.png" alt="twitter" class="icon-social" loading="lazy">
     </div>
-
     <div class="footer-bottom-right">
       <img src="img/phone-call.png" alt="telephone">
       <span><a href="tel:+100000000">(+1) 000-000-000</a></span>
@@ -332,7 +333,6 @@
       <span><a href="mailto:Cégep@s.ca">Cégep@trois-rivières.ca </a></span>
     </div>
   </div>
-
 </footer>
 
 

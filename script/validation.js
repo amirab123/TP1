@@ -20,9 +20,6 @@ const msg = document.getElementById("message");
   });
     const   validateInputs =() =>
 
-
-
-
       {
           let noError =true;
           const nomValue = nom.value.trim();
@@ -139,8 +136,9 @@ const burger = document.querySelector(".burger");
     const isExpanded = burger.getAttribute("aria-expanded") === "true";
     burger.setAttribute("aria-expanded", !isExpanded);
   });
+  
 
-   // Accessibilité : activer le menu chart 
 
-document.querySelector('.circle').setAttribute('stroke-dasharray', '75, 100'); // 50%
-document.querySelector('.percentage').textContent = '75%';
+
+
+

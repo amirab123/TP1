@@ -1,3 +1,6 @@
+
+
+
 /* import fonts googleapis  */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *
@@ -22,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #FF6F00;
+  background-color: #cb600f;
   color: #fff;
 }
   /* Logo */
@@ -58,14 +61,27 @@ header {
 }
 
 .navbar a {
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 .navbar a:hover {
   text-decoration: underline;
 }
+
+/* ===== Menu burger ===== */
+.burger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition:  0.4s ease-in-out;
+}
+
+
 /* ===== SECTION 1 : slider : site Les P’tits Escaladeurs ===== */
 .slider-wrapper {
   position: relative;
@@ -147,10 +163,10 @@ display: none;
  
 }
 .arrows {
-  position: absolute;
+position: absolute;
 gap:20px;
-  width: 95% ;
-  display: flex;
+width: 95% ;
+display: flex;
 transform: translateY(-50%);
 padding: 0 15px;
 top: 50%;
@@ -251,6 +267,7 @@ pointer-events: none;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  opacity: 1; 
 }
 
 
@@ -262,9 +279,10 @@ pointer-events: none;
 }
 
 .titre-section {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #ff6f61;
   margin-bottom: 1rem;
+
 }
 
 .intro-section {
@@ -282,8 +300,6 @@ pointer-events: none;
 }
 
 .carte {
-
-
 pointer-events: all;
 cursor: pointer;
   padding: 2rem;
@@ -404,19 +420,7 @@ grid-column: 5 / 6;
   text-align: left;
   padding: 20px;
 }
-.statistique-figure .cercle {
-  width: 300px ;
-  height: 300px ;
-  border-radius: 50%;
-  background-color: #a6eda1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(0, 0, 0);
-  font-size: 24px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 .statistique-texte {
   flex: 1;
@@ -494,6 +498,8 @@ grid-column: 5 / 6;
 .membre .poste {
   font-style: italic;
   color: #ff6f61;
+   font-size: 0.9rem;
+   font-weight: bolder;
   margin-bottom: 0.5rem;
 }
 
@@ -514,7 +520,7 @@ grid-column: 5 / 6;
     margin-top: 10px;
 }
 
-.icon-social {
+.icon-socials {
    
     width: 24px !important;
     height: 24px !important;
@@ -528,7 +534,7 @@ grid-column: 5 / 6;
 }
 
 
-.icon-social:hover {
+.icon-socials:hover {
   transform: scale(1.2);
   filter: brightness(1.2);
 }
@@ -585,13 +591,10 @@ grid-column: 5 / 6;
 
 .ligne-nom-prenom input {
   flex: 1;
- 
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 0.5rem;
-
   width: 150px;
-
   padding: 8px;
   font-size: 16px;
 
@@ -739,13 +742,15 @@ height: 15px;
 }
 
 
-
-
+  
+/*couleur  accessibles 61ba97 */
 
 .fil-ariane a {
   text-decoration: none;
-  color: #61ba97;
+  color: #004d40;
   text-decoration-line: underline;
+  font-size: 1em;
+  font-weight: bolder;
 }
 
 .hr-map .container
@@ -789,15 +794,15 @@ footer {
   margin-bottom: 15px;
 }
 
-.icon-social {
-  width: 32px;
-  height: 32px;
+.social-media .icon-social {
+  width: 24px !important;
+  height: 24px !important;
   margin: 0 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
   cursor: pointer;
 }
 
-.icon-social:hover {
+.social-media .icon-social:hover {
   transform: scale(1.2);
 }
 
@@ -827,8 +832,14 @@ footer {
 
 
 .visually-hidden {
-  position: absolute;
-  left: -9999px;
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 
@@ -846,14 +857,7 @@ footer {
 
 
 
-.burger {
-  display: none;
-  font-size: 2em;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
+
 
 /* Responsive pour écrans de 768px ou moins */
 @media (max-width: 500px) {
@@ -897,34 +901,42 @@ footer {
   }
 }
 /*   Section 2 : Responsive pour mobile */
-@media (max-width: 500px) {
-  .cta-section {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem;
-  }
 
-  .cta-container, .cta-btn {
-    width: 100%;
-    text-align: center;
+
+ @media (max-width: 500px) {
+  .cta-container {
+    padding: 20px 15px;
   }
 
   .cta-input {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .cta-input input,
+  .cta-input input[type="text"],
   .cta-input button {
     width: 100%;
-    max-width: 100%;
   }
 
-  .cta-btn .btn {
+  .cta-btn {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .cta-sketch {
     width: 100%;
-    margin-top: 1rem;
+    height: 60px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
+
+
 /*   Section 3 : Responsive pour mobile */
 
 @media (max-width: 500px) {
@@ -997,7 +1009,7 @@ footer {
 }
 
 /*   Section 6  : Responsive pour mobile footer  */
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -1027,60 +1039,134 @@ footer {
     align-items: flex-start;
   }
 }
+@media screen and (max-width: 500px) {
+  footer {
+    display: none;
+  }
+
+}
 
 
 /*   code   : chart   */
+.bloc-droit {
+  padding: 40px 20px;
 
-.circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 300px;
-  max-height: 300px;
 }
 
-.circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8;
+.statistique-texte h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #FF6F00;
 }
 
-.circle {
-  fill: none;
-  stroke: #00acc1;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
+.statistique-texte p {
+  max-width: 600px;
+  color: #333;
+  margin-bottom: 30px;
 }
 
-.percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.5em;
-  text-anchor: middle;
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.statistiques-flex {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 40px;
-  background: #f9f9f9;
+  justify-content: space-around;
+}
+
+.stat {
+pointer-events: all;
+cursor: pointer;
+  padding: 2rem;
+  max-width: 280px;
+  border: 0px solid #FF6F00;
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
 }
 
 .stat h2 {
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 2.5em;
+  color: #005744;
   margin: 0;
 }
 
 .stat p {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #4FC3F7;
+  color: white;
+  border: 2px solid #4FC3F7;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #039BE5;
+}
+
+
+
+.gradient-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/*  section Statistics circles in CSS Responsive :  */
+.statistique-figure .gradient-circle {
+  width: 300px ;
+  height: 300px ;
+  border-radius: 50%;
+  border: 1px solid #00000080;
+  background-image: conic-gradient(#005744 33%, #00AF89 0%);
+  animation: rotateGradient 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/*  section Statistics circles in CSS Responsive : 500  sur mobile */
+@media screen and (max-width: 500px) {
+  .gradient-circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .statistiques-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 90%;
+  }
 }
