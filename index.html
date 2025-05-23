@@ -6,7 +6,7 @@
     <title>Les P’tits Escaladeurs</title>
      <link rel="stylesheet" href="css/style.css">
        <link rel="icon" type="image/png" href="img/icon.png">
-         <link rel="preload" as="image" href="img/boy-hanging-wall-lending-helping-hand-friend.jpg" />
+      
 </head>
 <body>
     <header>
@@ -14,7 +14,7 @@
       <div class="logo-titre">
     
                 <a href="#accueil">
-            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo site " class="logo" loading="lazy">
+            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo site" class="logo" >
         </a>
             <h1> 
               Les P’tits Escaladeurs</h1>
@@ -38,18 +38,16 @@
       <div class="slider-cadre">
     <div class="slider">
    <!-- Boutons radio -->
-      <input type="radio"   name="slider" id="image1"  checked>
-      <input type="radio"  name="slider" id="image2">
-      <input type="radio"  name="slider" id="image3">
+      <input type="radio"   name="slider" id="image1"  checked aria-labelledby="label-image1">
+      <input type="radio"  name="slider" id="image2"  aria-labelledby="label-image2">
+      <input type="radio"  name="slider" id="image3"  aria-labelledby="label-image3">
         <!-- FIELDSET contenant uniquement les labels -->
-     <fieldset class="visually-hidden">
+  
 
-        <legend class="visually-hidden">Choisissez une image</legend>
+        <span for="image1" class="visually-hidden" id="label-image1" >Image 1</span>
+        <span for="image2" class="visually-hidden" id="label-image2">Image 2</span>
+        <span for="image3" class="visually-hidden" id="label-image3">Image 3</span>
 
-        <label for="image1" class="visually-hidden">Image 1</label>
-        <label for="image2" class="visually-hidden">Image 2</label>
-        <label for="image3" class="visually-hidden">Image 3</label>
-     </fieldset>
               <!-- Images du slider -->
            <div class="images">
        <div class="slide s1">
@@ -65,8 +63,9 @@
  </div>
 
       <div class="arrows">
-      <label for="image3" class="arrow"  aria-label="Afficher  image 3">&#10094;</label>
-      <label for="image2" class="arrow" aria-label="Afficher image 2">&#10095;</label>
+      <label for="image3" class="arrow"  aria-label="Image précédente">&#10094;</label>
+      <label for="image2" class="arrow" aria-label="Image suivante">&#10095;</label>
+        
     </div>
 
     <div class="dots" aria-label="Navigation par points">
@@ -111,7 +110,7 @@
 
     <div class="cartes">
       <div class="carte">
-        <img src="img/jeux.png" alt="Aire de jeu escalade" class="icone"loading="lazy">
+        <img src="img/jeux.png" alt="Aire de jeu escalade" class="icone" loading="lazy">
         <h3>Parcours amusants</h3>
         <p>Des murs adaptés à chaque âge avec des défis rigolos pour explorer en toute sécurité.</p>
       </div>
@@ -121,7 +120,7 @@
         <p>Nos animateurs spécialisés veillent à la sécurité et à l’amusement de vos enfants à chaque instant.</p>
       </div>
       <div class="carte">
-        <img src="img/party-hat.png" alt="Événements" class="icone"loading="lazy">
+        <img src="img/party-hat.png" alt="Événements" class="icone" loading="lazy">
         <h3>Anniversaires & événements</h3>
         <p>Fêtez des moments inoubliables en hauteur avec nos formules d’anniversaires originales !</p>
        
@@ -140,7 +139,7 @@
     <section class="galerie">
   <div class="item item1"><img src="img/2200.jpg" alt="Enfant escaladant un mur coloré" loading="lazy"></div>
   <div class="item item2"><img src="img/woman-rock-climbing-indoors-arena.jpg" alt="Atelier d’escalade pour enfants" loading="lazy"></div>
-  <div class="item item3"><img src="img/portrait-cartoon-sports-team.jpg" alt="Fête d’anniversaire dans la salle"loading="lazy"></div>
+  <div class="item item3"><img src="img/portrait-cartoon-sports-team.jpg" alt="Fête d’anniversaire dans la salle" loading="lazy"></div>
   <div class="item item4"><img src="img/fhhx_qvpk_220222.jpg" alt="Atelier d’escalade" loading="lazy"></div>
   <div class="item item5"><img src="img/man-bouldering-spot.jpg" alt="escalade " loading="lazy"></div>
   <div class="item item6"><img src="img/mother-daughter-rock-climbing-together-indoors-arena (1).jpg" alt="Encadrement par un animateur" loading="lazy"></div>
@@ -176,6 +175,7 @@
         <div class="stat">
     <h2>328 B</h2>
     <p>Support disponible</p>
+    <button class="btn invisible" aria-hidden="true" disabled>Voir plus</button>
   </div>
       </div>
     </div>
@@ -294,8 +294,9 @@
 
 <section>
    <div class="logo-section">
-     <hr class="hr-map">
-    <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="logo du site" class="logo" loading="lazy">
+   
+
+    <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="logo du site" class="logo logo-s" loading="lazy">
   </div>
 <div class="breadcrumb">
   <nav aria-label="Fil d'Ariane">
@@ -322,10 +323,17 @@
       Fait Par : <strong>Amira Belgharat </strong>
     </div>
     <div class="social-media">
-      <img src="img/facebook.png" alt="facebook" class="icon-social" loading="lazy">
+      <a href=""  target="_blank">
+      <img src="img/facebook.png" alt="facebook" class="icon-social" loading="lazy"></a>
+         <a href=""  target="_blank">
       <img src="img/logolinkedin.png" alt="linkedin"  class="icon-social" loading ="lazy">
+      </a>
+         <a href=""  target="_blank">
       <img src="img/instagram.png" alt="instagram" class="icon-social" loading="lazy">
+      </a>
+         <a href=""  target="_blank">
       <img src="img/twitter.png" alt="twitter" class="icon-social" loading="lazy">
+      </a>
     </div>
     <div class="footer-bottom-right">
       <img src="img/phone-call.png" alt="telephone">
