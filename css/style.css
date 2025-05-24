@@ -1053,9 +1053,39 @@ footer {
     justify-content: center;
   }
 }
+/* Responsive spécifique pour les petits écrans */
+@media (max-width: 800px) {
+  .equipe-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .membre {
+    border-right: none;
+ 
+  }
+
+  .membre:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 500px) {
+  .equipe-container {
+    grid-template-columns: 1fr;
+  }
+
+  .membre {
+    text-align: center;
+    border-right: none;
+  
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
 
 /*   Section 6  : Responsive pour mobile footer  */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
