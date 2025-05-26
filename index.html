@@ -8,31 +8,49 @@
        <link rel="icon" type="image/png" href="img/icon.png">
       
 </head>
-<body>
-    <header>
-    <!-- header  -->
-      <div class="logo-titre">
-    
-                <a href="#accueil">
-            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo site" class="logo" >
-        </a>
-            <h1> 
-              Les P’tits Escaladeurs</h1>
-      
-        </div>
 
-  <!-- Menu burger (visible  mobile 500) -->
-  <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"  aria-controls="nav-principale">☰</button>
+<body>
+<header class="header">
+    <div class="header__container">
+      <div class="header__logo">
   
-    <nav class="navbar" id="nav-principale" role=“navigation”>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#activites">Nos Activités</a></li>
-        <li><a href="#inscription">Inscription</a></li>
-        <li><a href="#contact">Contact </a></li>
-      </ul>
-    </nav>
+           <a href="#accueil">
+            <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="Logo site"   class="header__logo-img" >
+        </a>
+        <h1 class="header__logo-titre">Les P’tits Escaladeurs</h1>
+      </div>
+
+
+        
+      <nav class="navbar">
+        <div class="burger" id="burger" >☰</div>
+        <ul class="navbar__list" id="navMenu">
+         <li class="navbar__item">
+      <a href="#accueil" class="navbar__link">
+        <span class="navbar__link__icon">
+          <img src="img/shape.png" alt="Icône Accueil" class="navbar__link__icon-img">
+        </span>
+        <span class="navbar__link__text">Accueil</span>
+        <span class="navbar__link__arrow">▼</span>
+      </a>
+    </li>
+          <li class="navbar__item"><a href="#activites " class="navbar__link">      <span class="navbar__link__icon">
+          <img src="img/shape.png" alt="Icône" class="navbar__link__icon-img">
+        </span>     <span class="navbar__link__text"> Nos Activités </span> <span class="navbar__link__arrow">▼</span></a></li>
+          <li class="navbar__item"><a href="#inscription" class="navbar__link">  <span class="navbar__link__icon">
+          <img src="img/shape.png" alt="Icône Accueil" class="navbar__link__icon-img">
+        </span>    <span class="navbar__link__text"> Inscription </span> </a></li>
+          <li class="navbar__item"><a href="#contact" class="navbar__link">    <span class="navbar__link__icon">
+          <img src="img/shape.png" alt="Icône" class="navbar__link__icon-img">
+        </span>  <span class="navbar__link__text"> Contact </span></a></li>
+        </ul>
+      </nav>
+
+
+       </div>
   </header>
+
+   
   <main>
   <div  class="container slider-wrapper" id="accueil">
       <div class="slider-cadre">
@@ -296,7 +314,7 @@
    <div class="logo-section">
    
 
-    <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="logo du site" class="logo logo-s" loading="lazy">
+    <img src="img/Logo_Centre_Enfants_Association_Activité_Ecole_Bleu_Jaune__2_-removebg-preview.png" alt="logo du site" class="header__logo-img logo-s" loading="lazy">
   </div>
 <div class="breadcrumb">
   <nav aria-label="Fil d'Ariane">

@@ -126,15 +126,15 @@ const isMessageTooLong = message => {
 
    // Accessibilité : activer le menu
 
-const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".navbar");
+const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('navMenu');
 
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("active");
+  burger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 
-   
-    const isExpanded = burger.getAttribute("aria-expanded") === "true";
-    burger.setAttribute("aria-expanded", !isExpanded);
+
+  //  l’attribut aria-expanded pour l’accessibilité
+
   });
   
 
