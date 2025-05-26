@@ -9,13 +9,6 @@
  padding: 0;
 
 } 
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
 body {
   background-color: #ffffff;
 }
@@ -71,11 +64,10 @@ display: flex;
   color: #ffffff;
   text-decoration: none;
   padding: 0 15px;
-<<<<<<< HEAD
+
   font-size: 1.5em;
-=======
-  font-size: 1.4em;
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
+
+
 }
 
 .navbar__link__icon-img {
@@ -93,7 +85,6 @@ display: flex;
 
 .navbar__link__arrow {
   margin-left: 8px;
-<<<<<<< HEAD
   font-size: 1em;
 }
 .navbar__link__text:focus {
@@ -102,12 +93,10 @@ display: flex;
   outline-offset: 4px;
 }
 
-=======
-  font-size: 0.7em;
-}
 
 
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
+
+
 /* ===== Menu Burger ===== */
 
 
@@ -994,7 +983,7 @@ footer {
     margin-top: 1rem;
   }
 
-=======
+
   }
 
   .navbar__list.active {
@@ -1007,12 +996,12 @@ footer {
     color: rgb(246, 246, 244);
     padding: 10px 20px;
   }
-}
+
 
 
 /*   Section 1 : Responsive pour mobile */
 @media (max-width: 500px) {
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
+
   .arrow {
     font-size: 2rem;
     padding: 0.5rem 1rem;
@@ -1326,11 +1315,11 @@ footer {
   }
 }
 @media (max-width: 500px) {
-<<<<<<< HEAD
+
   footer.container{
-=======
-  footer {
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
+ 
+
+    
       display: none;
   }
 
@@ -1501,13 +1490,10 @@ cursor: pointer;
 
 /* Responsive */
 
-<<<<<<< HEAD
-=======
-  .stat {
-    width: 50%;
-  }
-}
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
+
+  
+
+
 .logo-s {
   border: 1px solid rgb(57, 171, 100);
 }
