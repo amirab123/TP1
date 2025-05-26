@@ -12,75 +12,98 @@
 
 
 
+
 body {
-background-color:#ffffff;
+  background-color: #ffffff;
 }
-.container{
+
+.container {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+
+/* ===== Header ===== */
+.header {
   background-color: #328E6E;
   color: #fff;
+  padding: 10px 0;
 }
-  /* Logo */
-.logo {
-  width: 150px;
-  height: 90px;
-  margin-right: 15px;
+
+.header__container {
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
-.logo img{
-  width: 200px;
-  height: 80px;
-  margin-right: 15px;
-}
-.logo-titre {
+
+.header__logo {
   display: flex;
   align-items: center;
 }
 
- .h1-logo {
-  padding-left: 20px;
-  font-size: 1.8em;
-  margin: 0;
+.header__logo-img {
+  height: 70px;
+  width: auto;
 }
-/* ====== Navigation ====== */
-.navbar ul {
+
+.header__logo-titre {
+  font-size: 1.8em;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar__list {
   list-style: none;
   display: flex;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
-
-.navbar li {
-  margin: 0 15px;
-}
-
-.navbar a {
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.5em;
+  padding: 0 15px;
+  font-size: 1.4em;
 }
 
-.navbar a:hover {
+.navbar__link__icon-img {
+  width: 20px;  /* adapte la taille à ton besoin */
+  height: auto;
+}
+
+.navbar__link__text {
+  text-decoration: none;
+}
+
+.navbar__link__text:hover {
   text-decoration: underline;
 }
 
-/* ===== Menu burger ===== */
+.navbar__link__arrow {
+  margin-left: 8px;
+  font-size: 0.7em;
+}
+
+
+/* ===== Menu Burger ===== */
+
+
+/* Menu burger */
+
+
 .burger {
   display: none;
-  font-size: 2em;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition:  0.4s ease-in-out;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
+
 
 
 /* ===== SECTION 1 : slider : site Les P’tits Escaladeurs ===== */
@@ -879,35 +902,41 @@ footer {
 
 
 /* Responsive pour écrans de 768px ou moins */
-@media (max-width: 500px) {
-  header {
-    flex-wrap: wrap;
-  }
+/* Affiche le burger uniquement sur petits écrans */
 
+
+@media (max-width: 500px) {
   .burger {
     display: block;
   }
 
-  .navbar {
+  .navbar__list {
     display: none;
-    width: 100%;
-  }
-
-  .navbar.active {
-    display: block;
-  }
-
-  .navbar ul {
     flex-direction: column;
-    align-items: flex-start;
+    background-color: #328E6E;
+    position: absolute;
+    top: 70px; /* hauteur du header */
+    right: 10px;
+    width: 200px;
+    border-radius: 8px;
     padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
 
-  .navbar li {
-    margin: 10px 0;
-    padding-left: 10px;
+  .navbar__list.active {
+    display: flex;
+  }
+
+  .navbar__link {
+      padding: 10px 15px;
+    font-size: 1.2em;
+    color: rgb(246, 246, 244);
+    padding: 10px 20px;
   }
 }
+
+
 /*   Section 1 : Responsive pour mobile */
 @media (max-width: 500px) {
   .arrow {
@@ -921,39 +950,54 @@ footer {
 }
 /*   Section 2 : Responsive pour mobile */
 
-
- @media (max-width: 500px) {
+@media (max-width: 500px) {
   .cta-container {
-    padding: 20px 15px;
+    padding: 15px 10px;
+  }
+
+  .cta-container p {
+    font-size: 15px;
+    max-width: 100%;
+    margin-inline: 0;
+    text-align: center;
   }
 
   .cta-input {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    gap: 12px;
   }
 
-  .cta-input input[type="text"],
+  .cta-input input[type="text"] {
+    width: 100%;
+    max-width: 280px;
+  }
+
   .cta-input button {
     width: 100%;
+    max-width: 280px;
   }
 
   .cta-btn {
+    padding: 15px 10px;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
+    gap: 15px;
+    margin-top: 25px;
   }
 
   .cta-sketch {
-    width: 100%;
-    height: 60px;
+    width: 180px;
+    height: 35px;
+    margin: 0 auto;
   }
 
   .btn {
     width: 100%;
-    text-align: center;
+    max-width: 280px;
   }
 }
+
+ 
 
 
 /*   Section 3 : Responsive pour mobile */
@@ -993,7 +1037,7 @@ footer {
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 8px;
+ 
   }
 }
 
@@ -1115,9 +1159,9 @@ footer {
     align-items: flex-start;
   }
 }
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   footer {
-    display: none;
+      display: none;
   }
 
 }
@@ -1248,7 +1292,7 @@ cursor: pointer;
   }
 
   .stat {
-    width: 90%;
+    width: 50%;
   }
 }
 .logo-s {
