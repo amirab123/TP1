@@ -127,6 +127,7 @@ const isMessageTooLong = message => {
 
 const burger = document.getElementById('burger');
   const navMenu = document.getElementById('navMenu');
+<<<<<<< HEAD
 
   burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
@@ -134,6 +135,14 @@ const burger = document.getElementById('burger');
 
   //  l’attribut aria-expanded pour l’accessibilité
 
+=======
+
+  burger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+
+
+  //  l’attribut aria-expanded pour l’accessibilité
+>>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
 
   });
   
