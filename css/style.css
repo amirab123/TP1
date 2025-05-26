@@ -85,7 +85,11 @@ display: flex;
   margin-left: 8px;
   font-size: 1em;
 }
-
+.navbar__link__text:focus {
+  text-decoration: underline;
+  outline: 2px solid #e6eaef;
+  outline-offset: 4px;
+}
 
 /* ===== Menu Burger ===== */
 
@@ -932,18 +936,107 @@ footer {
   }
 }
 
-
-/*   Section 1 : Responsive pour mobile */
 @media (max-width: 500px) {
-  .arrow {
-    font-size: 1.5rem;
-    padding: 0 5px;
+  /* Conteneur principal : empile les éléments verticalement */
+  .container.slider-wrapper {
+    padding: 1rem;
   }
-  .dots label {
-    width: 8px;
-    height: 8px;
+
+  .slider-cadre {
+    width: 100%;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+
+  /* Images du slider prennent toute la largeur */
+  .images {
+    width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .arrow {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
   }
 }
+
+
+
+
+
+/*   Section 1 : Responsive pour mobile */
+
+@media (max-width: 500px) {
+  /* Conteneur principal : empile les éléments verticalement */
+  .container.slider-wrapper {
+    padding: 1rem;
+  }
+
+  .slider-cadre {
+    width: 100%;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+
+  /* Images du slider prennent toute la largeur */
+  .images {
+    width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Navigation par points empilée et espacée */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Flèches plus grandes et mieux espacées */
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .arrow {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+}
+
+
 /*   Section 2 : Responsive pour mobile */
 
 @media (max-width: 500px) {
@@ -1164,37 +1257,39 @@ footer {
 
 /*   Section 6  : Responsive pour mobile footer  */
 @media (max-width: 700px) {
+  footer.container {
+    padding: 1rem;
+    text-align: center;
+  }
+
   .footer-top {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .author,
-  .social-media,
-  .footer-bottom-right {
-    text-align: left;
-    flex: 1 1 100%;
-    margin-bottom: 10px;
-  }
-
-  .social-media {
-    justify-content: flex-start;
-  }
-
-  .footer-bottom-right a {
-    display: block;
-    margin-bottom: 5px;
+    gap: 1rem;
+    align-items: center;
   }
 
   .footer-bottom-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .icon-social {
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width: 500px) {
-  footer {
+  footer.container{
       display: none;
   }
 
