@@ -260,7 +260,7 @@ label:focus {
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
-  font-size: medium;
+  font-size: x-large;
    border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -268,7 +268,7 @@ label:focus {
   opacity: 1 ;
 }
 .cta-input button:hover {
-  background-color: #5ae0a8;
+  background-color: #1d6849;
 }
 
 .cta-btn {
@@ -784,7 +784,7 @@ height: 15px;
   text-decoration: none;
   color: #005744;
   text-decoration-line: underline;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bolder;
 }
 
