@@ -1,4 +1,4 @@
-
+  // Récupérer les valeurs des champs du formulaire
 const formulaire = document.getElementById("contactForm");
 const nom = document.getElementById("nom");
 const prenom = document.getElementById("prenom");
@@ -13,8 +13,6 @@ const msg = document.getElementById("message");
     e.preventDefault();
     if (validateInputs()) { 
       formulaire.submit(); 
-    
-
   }
 
   });
@@ -31,12 +29,12 @@ const msg = document.getElementById("message");
           if (nomValue === "") {
               setError(nom, 'nom  est requis ');
             
-              noError=false;
+              noError=false; // Arrête l'envoi du formulaire
           } 
       
           else if (isNameTooLong(nomValue)) {
               setError(nom, 'Le nom est trop long !');
-              noError = false;
+              noError = false; // Arrête l'envoi du formulaire
           }
           else {
               setSuccess(nom);
@@ -53,10 +51,11 @@ const msg = document.getElementById("message");
         else {
             setSuccess(prenom);
         }
+         // Vérifier si le champ "email" est vide
             if (emailValue === "") {
               setError(email, " L'email est requis  !");
               console.log(email);
-              noError = false;
+              noError = false; // Arrête l'envoi du formulaire
             }
             else if (!isValidEmail(emailValue)) {
               setError(email, 'Adresse email incorrecte. Veuillez réessayer');
@@ -68,12 +67,12 @@ const msg = document.getElementById("message");
       
           }
             if (messageValue === "") {
-              setError(msg, "message est requis  !");
+              setError(msg, "message est requis  !");// Message d'erreur si vide
               noError=false;
             }
       
             else if (isMessageTooLong(messageValue)) {
-              setError(msg, 'Message est trop long !');
+              setError(msg, 'Message est trop long !');// Message d'erreur si vide
               noError = false;
           }
           else {
@@ -104,7 +103,7 @@ const msg = document.getElementById("message");
 
   
 
-
+  //  fonction Vérifier le format de l'adresse e-mail avec une expression régulière
 const isValidEmail = email => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
@@ -134,6 +133,7 @@ const burger = document.getElementById('burger');
 
 
   //  l’attribut aria-expanded pour l’accessibilité
+
 
   });
   

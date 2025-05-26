@@ -10,9 +10,6 @@
 
 } 
 
-
-
-
 body {
   background-color: #ffffff;
 }
@@ -68,7 +65,7 @@ display: flex;
   color: #ffffff;
   text-decoration: none;
   padding: 0 15px;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .navbar__link__icon-img {
@@ -86,7 +83,7 @@ display: flex;
 
 .navbar__link__arrow {
   margin-left: 8px;
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 
@@ -224,7 +221,7 @@ label:focus {
   outline: 2px solid #2bab5c;
   outline-offset: 2px;
 }
-
+/* ===== SECTION 2 :  texte + input ===== */
 .cta-section {
   width: 100%;
   background-color: #f8f8f7;
@@ -1068,17 +1065,55 @@ footer {
 
 /*   Section 5  : Responsive pour mobile */
 
-@media (max-width: 500px) {
-.formulaire-contact 
-   {
+@media (max-width: 700px) {
+  .map-form-section {
+    height: auto; /* hauteur adaptative */
+    min-height: 400px;
+  }
+
+  .formulaire-contact {
+    position: relative;
+    top: auto;
+    transform: none;
+    max-width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .ligne-nom-prenom {
     flex-direction: column;
   }
 
-  button[type="submit"] {
-    width: 100%;
-    text-align: center;
+  .ligne-nom-prenom input {
+    width: 80%;
   }
 }
+
+@media (max-width: 500px) {
+  .map-form-section {
+    min-height: 350px;
+  }
+
+  .map-background {
+    height: 300px;
+  }
+
+  .formulaire-contact {
+    padding: 0.8rem;
+  }
+
+  .formulaire-contact h2 {
+    font-size: 1.3rem;
+  }
+
+  .formulaire-contact button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+ 
 /*   Section 6  : Responsive pour mobile */
 
 
@@ -1098,7 +1133,7 @@ footer {
   }
 }
 /* Responsive spécifique pour les petits écrans */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .equipe-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1129,7 +1164,7 @@ footer {
 }
 
 /*   Section 6  : Responsive pour mobile footer  */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -1297,4 +1332,15 @@ cursor: pointer;
 }
 .logo-s {
   border: 1px solid rgb(57, 171, 100);
+}
+
+
+
+.separator-container {
+  margin: 40px 0;
+gap: 20px;
+ 
+
+
+     
 }
