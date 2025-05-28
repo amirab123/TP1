@@ -1,0 +1,77 @@
+@import 'variable';
+
+// Headers scss
+.header {
+  background-color: $couleur-principale;
+  color: $couleur-blanc;
+  padding: 10px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  height: 70px;
+  width: auto;
+}
+
+.header__logo-titre {
+  font-size: $texte-size;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+/* ===== Naviagation  ===== */
+.navbar__list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $couleur-blanc;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: $font-size-nav;
+font-weight:bold;
+  &__icon-img {
+    width: 20px;  
+  }
+
+  &__text {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__arrow {
+    margin-left: 8px;
+    font-size: 0.9em;
+  }
+}
+
+/* ===== Menu Burger ===== */
+.burger {
+  display: none;
+  font-size: 2em;
+  color: $couleur-blanc;
+  cursor: pointer;
+
+}

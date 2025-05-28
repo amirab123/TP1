@@ -127,27 +127,73 @@ const isMessageTooLong = message => {
 
 const burger = document.getElementById('burger');
   const navMenu = document.getElementById('navMenu');
-<<<<<<< HEAD
+
+
+ 
+
+
+
 
   burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 
 
-  //  l’attribut aria-expanded pour l’accessibilité
 
-=======
-
-  burger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-
-
-  //  l’attribut aria-expanded pour l’accessibilité
->>>>>>> 96b5869a3142af6db284e3cc88c6755472354ee5
 
   });
   
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('searchForm');
+  const input = document.getElementById('searchInput');
+  const errorMessage = document.getElementById('search-error');
 
+  function verifierRecherche() {
+    const recherche = input.value.trim().toLowerCase();
+
+    if (!recherche) {
+      errorMessage.textContent = "Veuillez entrer un mot";
+      errorMessage.style.color = "red";
+
+
+      errorMessage.tabIndex = 0;
+      errorMessage.focus();
+
+      return false;
+    }
+
+    const textePage = document.body.textContent.toLowerCase();
+
+    if (textePage.includes(recherche)) {
+      errorMessage.textContent = `Le mot "${recherche}" a été trouvé dans la page `;
+      errorMessage.style.color = "green";
+
+      errorMessage.tabIndex = 0;
+      errorMessage.focus();
+
+      return true;
+    } else {
+      errorMessage.textContent = `Aucun résultat pour "${recherche}".`;
+      errorMessage.style.color = "red";
+
+      errorMessage.tabIndex = 0;
+      errorMessage.focus();
+
+      return false;
+    }
+  }
+
+  // Événement keyup pour recherche en temps réel
+  input.addEventListener('keyup', verifierRecherche);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (verifierRecherche()) {
+      console.log('Recherche valide');
+    }
+  });
+});
 

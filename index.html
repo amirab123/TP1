@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les P’tits Escaladeurs</title>
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="style/sass/style.css">
        <link rel="icon" type="image/png" href="img/icon.png">
       
 </head>
@@ -101,19 +101,48 @@
       Rejoignez l’univers coloré des <strong>P’tits Escaladeurs</strong> ! 
       Des parcours ludiques, des murs adaptés à tous les niveaux et une équipe passionnée pour encadrer vos enfants en toute sécurité.
     </p>
-    <div class="cta-input">
-      <input type="text" placeholder="Entrez votre courriel" aria-label="Adresse courriel">
-      <button     aria-label="S'inscrire à la newsletter"  aria-pressed="false" tabindex="0">S'inscrire</button>
+   <form class="cta-input" id="searchForm" action="#" method="GET" novalidate>
+  <div class="champ-formulaire">
+    <label for="searchInput" class="visually-hidden">Recherche :</label>
+    
+    <input 
+      type="search" 
+      id="searchInput" 
+      name="q" 
+      placeholder="Rechercher une activité" 
+      aria-label="Recherche" 
+      required 
+      tabindex="0"
+    >
 
-    </div>
+   
+    <div 
+      class="errormessage" 
+      id="search-error" 
+      aria-live="polite"
+    ></div>
+  </div>
+   <button 
+      class="btn" 
+      type="submit" 
+      aria-label="Lancer la recherche"
+    >
+      Chercher
+    </button>
+
+</form>
+
   </div>
 
   <div class="cta-btn">
-    <div class="cta-sketch"  aria-hidden="true" ></div>
+    <div class="cta-sketch"  aria-hidden="true"  >
+
+      <img src="img/signature.png" alt="signature">
+    </div>
     <button class="btn"    aria-pressed="false"  aria-label="Réserver une séance d'escalade"  tabindex="0"> Réserver une séance</button>
  
   </div>
-</div>
+
 <!-- SECTION 3 : Description du site Les P’tits Escaladeurs -->
 <!-- Cette section présente notre univers, les valeurs du site et ce que les enfants peuvent y découvrir -->
 

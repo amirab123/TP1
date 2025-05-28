@@ -1,0 +1,49 @@
+
+// Couleurs principales
+$couleur-principale: #328E6E;
+$couleur-texte-blanc: #ffffff;
+$couleur-fond: #f5f5f5;
+$couleur-texte: #333;
+$font-size-nav: 1.3em;
+$couleur-hover: lighten($couleur-principale, 10%);
+$couleur-blanc :#ffffff;
+$couleur-input:#ccc;
+$texte-size :2em;
+$border-color: rgb(57, 171, 100);
+
+
+// Variables pour les couleurs
+$vert-principal: #1c8d36;
+$vert-secondaire: #32bc89;
+$vert-bordure: #49b171;
+$gris-translucide: rgba(107, 105, 105, 0.5);
+$noir-translucide: rgba(0, 0, 0, 0.8);
+
+// Variables  couleurs
+$color-success: #09c372;
+$color-error: #ff3860;
+$color-btn-bg: #ee2e15;
+$color-btn-bg-hover: #a91006;
+$color-label: #444;
+$color-title: #28cc5a;
+
+
+$text-muted: #444;
+$border-color: #959292;
+$color-poste: #287b14;
+$color-btn:#187a46;
+$color-btn-border:#a2f3c4;
+
+
+// Polices
+$font-principale: 'Open Sans', sans-serif;
+$font-secondaire: 'Poppins', sans-serif;
+
+
+$largeur-max: 1200px;
+$largeur-responsive: 90%;
+
+
+// Chemins d'images
+$img-path: "../img";
+$signature-img: "#{$img-path}/signa.png";

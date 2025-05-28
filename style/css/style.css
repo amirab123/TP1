@@ -921,7 +921,7 @@ footer {
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
-<<<<<<< HEAD
+
   }
 
   .navbar__list.active {
@@ -988,6 +988,7 @@ footer {
     font-size: 1.2em;
     color: rgb(246, 246, 244);
     padding: 10px 20px;
+    
   }
 
 
@@ -1266,7 +1267,11 @@ footer {
   .membre {
     text-align: center;
     border-right: none;
+
   
+  }
+  .membre:last-child {
+    border-bottom: none;
   }
 
   .social-icons {
