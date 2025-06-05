@@ -1,0 +1,134 @@
+@use 'variable' as *;
+
+@use 'mixins' as *;
+@use 'placeholders';
+/* SECTION – Map */
+.map-form-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+  .map-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: brightness(0.7); 
+    z-index: 0;
+  }
+}
+
+.formulaire-contact {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: 1rem;
+  padding: 1rem;
+  background-color: $couleur-blanc;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+
+  p {
+    font-size: 0.95rem;
+    color: $color-label;
+    padding: 10px;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: $color-title;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  input,
+  textarea {
+    @extend %champ-saisie;
+  }
+
+  button {
+    @include bouton-style($color-btn-bg, $color-btn-bg-hover);
+  }
+
+  .ligne-nom-prenom {
+    display: flex;
+    gap: 1rem;
+
+    input {
+      flex: 1;
+      border-radius: 8px;
+      border: 1px solid $couleur-input;
+      width: 150px;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    &.success input {
+      border-color: $color-success;
+    }
+
+    &.error input {
+      border-color: $color-error;
+    }
+
+    .errormessage {
+      @extend %erreur-message;
+      color: $color-error;
+    }
+
+    &.success .errormessage {
+      color: $color-success;
+    }
+  }
+
+  .champ-formulaire {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &.success input,
+    &.success textarea {
+      border-color: $color-success;
+    }
+
+    &.error input,
+    &.error textarea {
+      border-color: $color-error;
+    }
+
+    .errormessage {
+      @extend %erreur-message;
+      color: $color-error;
+    }
+
+    &.success .errormessage {
+      color: $color-success;
+    }
+  }
+}
+.hr-map {
+  &.container {
+    padding: 20px;
+    gap: 20px;
+  }
+}

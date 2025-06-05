@@ -1,0 +1,68 @@
+@use  'variable' as * ;
+
+%galerie-item {
+  border: 1px solid $vert-bordure;
+  overflow: hidden;
+}
+
+%btn-style {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+%champ-saisie {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+%erreur-message {
+  font-size: 10px;
+  height: 15px;
+}
+%flex-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%section-centree {
+ display: flex;
+  align-items: center;
+justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+%centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// section avantages
+
+%carte-style {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  pointer-events: all;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  &:focus {
+    outline: 3px solid $vert-principal;
+    outline-offset: 3px;
+  }
+}

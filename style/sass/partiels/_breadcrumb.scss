@@ -1,0 +1,29 @@
+
+@use 'variable' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+.logo-section,
+.breadcrumb {
+  @extend %section-centree;
+}
+
+.breadcrumb img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.fil-ariane {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+
+  a {
+    @include lien-style();
+  }
+}

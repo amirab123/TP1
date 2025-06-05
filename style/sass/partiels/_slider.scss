@@ -1,0 +1,113 @@
+@use 'variable' as *;
+@use 'mixins' as *;
+
+@use 'placeholders';
+
+
+.slider-wrapper {
+  position: relative;
+  padding-top: 2rem;
+  gap: 10px;
+}
+
+.slider-cadre {
+  overflow: hidden;
+  background-color: $couleur-blanc;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+  input {
+    display: none;
+  }
+
+  .images {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    flex: 1 0 100%;
+    @extend %flex-centre;
+    height: 100%;
+
+    img {
+      border: 1px solid $vert-bordure;
+      width: 80%;
+      height: 80%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+  }
+
+  @for $i from 1 through 3 {
+    #image#{$i}:checked ~ .images {
+      transform: translateX(#{-100% * ($i - 1)});
+    }
+
+    #image#{$i}:checked ~ .dots label[for="image#{$i}"] {
+      background: $vert-principal;
+    }
+  }
+
+  .dots {
+    @extend %flex-centre;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 5px;
+
+    label {
+      @include rond(15px, $couleur-principale);
+      cursor: pointer;
+      transition: all 0.15s ease;
+
+      // Accessibilité recommandée (via HTML, non SCSS)
+      // <label for="image1" aria-label="Image 1"></label>
+    }
+  }
+
+  .arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 95%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    gap: 20px;
+
+    .arrow {
+      pointer-events: all;
+      @extend %flex-centre;
+      width: 30px;
+      height: 30px;
+      font-size: 2rem;
+      background: $gris-translucide;
+      color: $couleur-blanc;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: $noir-translucide;
+      }
+    }
+  }
+}
+
+.arrow:focus {
+  outline: 2px solid $couleur-principale;
+  outline-offset: 3px;
+}

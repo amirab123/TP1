@@ -1,0 +1,112 @@
+@use 'variable' as *;
+@use 'mixins' as *;
+
+@use 'placeholders';
+.statistiques {
+  @include flex-center;
+  padding: 40px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .statistique-figure {
+    .bloc-gauche {
+      @include flex(column);
+      text-align: left;
+      padding: 20px;
+
+      .gradient-section {
+        @include flex(column);
+        gap: 10px;
+        margin-top: 20px;
+
+        .gradient-circle {
+          @include cercle(300px);
+          border: 1px solid $couleur-noir;
+          background-image: conic-gradient($couleur-foncee 33%, $couleur-secondaire 0%);
+          animation: rotateGradient 4s linear infinite;
+          @include flex-center;
+          color: black;
+          font-size: 24px;
+          font-weight: bold;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  .bloc-droit {
+    width: 50%;
+    @include flex(column);
+    text-align: left;
+    padding: 20px;
+
+    .statistique-texte {
+      flex: 1;
+      min-width: 300px;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: $couleur-principale;
+      }
+
+      p {
+        font-size: 16px;
+        color: $couleur-texte;
+      }
+
+      .sous-texte {
+        margin-top: 10px;
+        font-size: 14px;
+        color: $texte-secondaire;
+      }
+
+      .statistiques-flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+
+        .stat {
+          h2 {
+            font-size: 2rem;
+            color: $couleur-texte;
+          }
+
+          p {
+            font-size: 1rem;
+            color: $texte-secondaire;
+          }
+
+          .btn {
+            @extend %btn-style;
+            margin-top: 10px;
+            background-color: $couleur-principale;
+            color: $couleur-blanc;
+
+            &:hover {
+              background-color: #09c372;
+            }
+
+            &.invisible {
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =====================
+// ANIMATION
+// =====================
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -1,0 +1,47 @@
+@use 'variable' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+
+.galerie {
+  @include grille-galerie;
+  background-color: $bg-light;
+
+  .item {
+    @extend %galerie-item;
+
+    img {
+      @include image-couverte;
+    }
+  }
+
+
+  .item1 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  .item2 {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
+  .item3 {
+    grid-column: 6 / span 2;
+    grid-row: 3 / span 3;
+  }
+
+  .item4 {
+    grid-column: 5 / 6;
+    grid-row: 2 / 4;
+  }
+
+  .item5 {
+    grid-column: 2 / span 1;
+    grid-row: span 2;
+  }
+
+  .item6 {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+}

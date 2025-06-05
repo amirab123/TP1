@@ -1,0 +1,555 @@
+
+@use 'variable' as *;
+@use 'mixins' as *;
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+// ==============================
+// 🌐 Responsive - Navigation
+// ==============================
+
+@media (max-width: 500px) {
+   .burger {
+    display: block;
+  }
+  .navbar__list {
+    position: relative;
+    display: none;
+    flex-direction: column; 
+    background-color: $couleur-principale; 
+    position: absolute; 
+    top: 60px;          
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px $couleur-noir;
+    z-index: 9999;
+    overflow: visible;
+  }
+
+  .navbar__list.active {
+    display: flex;
+  }
+
+ 
+}
+
+
+
+
+@media (max-width: 700px) {
+  .slider {
+    height: 400px;
+
+    .slide img {
+      width: 90%;
+      height: auto;
+    }
+
+    .arrows {
+      width: 100%;
+      padding: 0 10px;
+
+      .arrow {
+        font-size: 1.5rem;
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+      }
+    }
+
+    .dots label {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    height: 300px;
+
+    .slide img {
+      width: 95%;
+      height: auto;
+    }
+
+    .arrows .arrow {
+      font-size: 1.2rem;
+      width: 22px;
+      height: 22px;
+      padding: 6px;
+    }
+
+    .dots {
+      bottom: 10px;
+
+      label {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+
+// ==============================
+// 🌐 Responsive - section equipe 
+// ==============================
+
+ .equipe-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f8f7;
+  gap: 20px;
+
+  h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    color: #666;
+  }
+
+  .equipe-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .membre {
+      padding: 1rem;
+      border-right: 2px solid #959292;
+      text-align: left;
+      margin-bottom: 20px;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .poste {
+        font-style: italic;
+        color: #287b14;
+        font-size: 1rem;
+        font-weight: bolder;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #444;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+        margin-top: 10px;
+
+        .icon-socials {
+          width: 24px !important;
+          height: 24px !important;
+          max-width: none;
+          max-height: none;
+          margin: 0;
+          padding: 0;
+          border: none;
+          display: inline-block;
+
+          &:hover {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// ==============================
+// 🌐 Responsive - section galerie 
+// ==============================
+
+.galerie {
+  @media screen and (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 10px;
+
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5,
+    .item6 {
+      grid-column: span 1;
+      grid-row: auto;
+    }
+
+    .item {
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+    }
+  }
+  // --- Responsive pour écran jusqu'à 700px ---
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5,
+    .item6 {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+
+    .item {
+      img {
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+}
+
+
+// ==============================
+// 🌐 Responsive - section equipe
+// ==============================
+
+@media (max-width: 700px) {
+  .equipe-section {
+    padding: 2rem 1rem;
+
+    .equipe-container {
+      grid-template-columns: repeat(2, 1fr);
+
+      .membre {
+        border-right: none;
+        text-align: center;
+
+        img {
+          margin: 0 auto 1rem auto;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .equipe-section {
+    padding: 2rem 1rem;
+
+    .equipe-container {
+      grid-template-columns: 1fr;
+
+      .membre {
+        text-align: center;
+        border: 2px solid transparent;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          border: none;
+        }
+
+        img {
+          margin: 0 auto 1rem auto;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+  //  RESPONSIVE Map + Formulaire  POUR LES PETITS ÉCRANS 
+/* 📩 RESPONSIVE – Écrans ≤ 700px */
+@media  screen and (max-width: 700px) {
+  .formulaire-contact {
+    margin: 0 auto;
+    top: auto;
+    transform: none;
+    position: static;
+
+    .ligne-nom-prenom {
+      flex-direction: column;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* RESPONSIVE Écrans : 500px */
+
+// 🔽 Map  responsive
+@media (max-width: 500px) {
+  .map-form-section {
+    min-height: 350px;
+
+    .map-background {
+      height: 300px;
+    }
+  }
+
+  .formulaire-contact {
+    padding: 0.8rem;
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+
+    .ligne-nom-prenom {
+      flex-direction: column;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  }
+ // 📉   statistiques   responsive
+@media screen and (max-width: 700px) {
+  .statistiques {
+    flex-direction: column;
+
+    .bloc-droit {
+      width: 100%;
+      padding: 10px;
+
+      .statistique-texte {
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        .sous-texte {
+          font-size: 12px;
+        }
+
+        .statistiques-flex {
+          flex-direction: column;
+          gap: 20px;
+
+          .stat {
+            h2 {
+              font-size: 1.8rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .statistique-figure {
+      .bloc-gauche {
+        padding: 10px;
+
+        .gradient-section {
+          .gradient-circle {
+            width: 200px;
+            height: 200px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .statistiques {
+    padding: 20px;
+
+    .bloc-droit {
+      .statistique-texte {
+        h2 {
+          font-size: 18px;
+        }
+
+        p, .sous-texte {
+          font-size: 12px;
+        }
+
+        .statistiques-flex {
+          .stat {
+            h2 {
+              font-size: 1.5rem;
+            }
+
+            p {
+              font-size: 0.8rem;
+            }
+
+            .btn {
+              font-size: 0.8rem;
+              padding: 0.4rem 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .statistique-figure {
+      .bloc-gauche {
+        .gradient-section {
+          .gradient-circle {
+            width: 150px;
+            height: 150px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .logo-section,
+  .breadcrumb {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .fil-ariane {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      font-size: 1.1em;
+    }
+  }
+
+  .logo {
+    .breadcrumb {
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+
+  .hr-map .container {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo-section,
+  .breadcrumb {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .fil-ariane {
+    font-size: 14px;
+
+    a {
+      font-size: 1em;
+    }
+  }
+
+  .logo {
+    .breadcrumb {
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+
+  .hr-map .container {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+
+ @media (max-width: 700px) {
+    .footer-top {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .author,
+      .social-media,
+      .footer-bottom-right {
+        flex: none;
+        width: 100%;
+        text-align: left !important;
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom-right {
+        text-align: left !important;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    
+    footer
+     {
+    display: none;
+  }
+   }

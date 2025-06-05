@@ -1,19 +1,21 @@
+@use  'variable' as *;
+@use 'mixins' as * ;
+@use 'placeholders';
+
 .header {
-  background-color: #328E6E;
-  color: #ffffff;
+  background-color: $couleur-principale;
+  color: $couleur-blanc;
   padding: 10px 0;
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
+  @extend %centre;
   justify-content: space-between;
   position: relative;
 }
 
 .header__logo {
-  display: flex;
-  align-items: center;
+    @extend %centre;
 }
 
 .header__logo-img {
@@ -22,7 +24,7 @@
 }
 
 .header__logo-titre {
-  font-size: 2em;
+  font-size: $texte-size;
   margin-left: 15px;
   font-weight: bold;
 }
@@ -38,33 +40,36 @@
 }
 
 .navbar__link {
-  display: flex;
-  align-items: center;
+    @extend %centre;
   gap: 8px;
-  color: #ffffff;
+  color: $couleur-blanc;
   text-decoration: none;
   padding: 0 15px;
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.navbar__link__icon-img {
-  width: 20px;
-}
-.navbar__link__text {
-  text-decoration: none;
-}
-.navbar__link__text:hover {
-  text-decoration: underline;
-}
-.navbar__link__arrow {
-  margin-left: 8px;
-  font-size: 0.9em;
+  font-size: $font-size-nav;
+font-weight:bold;
+  &__icon-img {
+    width: 20px;  
+  }
+
+  &__text {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__arrow {
+    margin-left: 8px;
+    font-size: 0.9em;
+  }
 }
 
 /* ===== Menu Burger ===== */
 .burger {
   display: none;
   font-size: 2em;
-  color: #ffffff;
+  color: $couleur-blanc;
   cursor: pointer;
-}/*# sourceMappingURL=header.css.map */
+
+}
