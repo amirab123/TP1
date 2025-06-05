@@ -1,7 +1,6 @@
 @use 'partiels/variable' as *;
 @use 'partiels/mixins';
 @use 'partiels/header';
-@use 'partiels/breadcrumb';
 @use 'partiels/slider';
 @use 'partiels/cta';
 @use 'partiels/section-avantages';
@@ -12,3 +11,4 @@
 @use 'partiels/footer';
 @use 'partiels/accessibilite';
 @use 'partiels/placeholders';
+@use 'partiels/breadcrumb';
