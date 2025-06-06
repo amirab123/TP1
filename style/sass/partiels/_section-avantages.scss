@@ -2,11 +2,11 @@
 @use 'mixins'  as *;
 @use 'placeholders' as *;;
 
-
 .section-avantages {
   padding: 4rem 2rem;
   text-align: center;
-background-color: $couleur-blanc;
+
+
   .titre-section {
     font-size: 3rem;
     color: $vert-principal;
@@ -21,23 +21,32 @@ background-color: $couleur-blanc;
   }
 
   .cartes {
-    @include flex-centre(row, wrap, center, center);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 
     .carte {
-      @extend %carte-style;
-      max-width: 280px;
+   
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 300px;
       text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
 
       .icone {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         margin-bottom: 1rem;
       }
 
       h3 {
-        font-size: 1.4rem;
-        color: $texte-titre;
+        font-size: 1.5rem;
+        color: $vert-principal;
         margin-bottom: 0.5rem;
       }
 
@@ -46,5 +55,14 @@ background-color: $couleur-blanc;
         color: $texte-secondaire;
       }
     }
+  }
+
+  hr {
+    margin: 4rem auto 0;
+    border: none;
+    height: 4px;
+    width: 80px;
+    background-color: $vert-principal;
+    border-radius: 2px;
   }
 }
