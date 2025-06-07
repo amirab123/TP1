@@ -41,7 +41,7 @@
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .slider {
     height: 400px;
 
@@ -311,60 +311,39 @@
 
   //  RESPONSIVE Map + Formulaire  POUR LES PETITS ÉCRANS 
 /* 📩 RESPONSIVE – Écrans ≤ 700px */
-@media  screen and (max-width: 700px) {
-  .formulaire-contact {
-    margin: 0 auto;
-    top: auto;
-    transform: none;
-    position: static;
+@media (max-width: 768px) {
+    .formulaire-contact {
+      padding: 1rem;
 
-    .ligne-nom-prenom {
-      flex-direction: column;
-
-      input {
-        width: 100%;
+      form {
+        .ligne-nom-prenom {
+          flex-direction: column;
+        }
       }
     }
   }
-}
 
-/* RESPONSIVE Écrans : 500px */
+  // Très petit écran
+  @media (max-width: 500px) {
+    .formulaire-contact {
+      padding: 1rem;
+    }
+
+    .formulaire-contact h2 {
+      font-size: 0.9rem;
+    }
+
+    .formulaire-contact p {
+      font-size: 0.8rem;
+    }
+  }
+
+
 
 // 🔽 Map  responsive
-@media (max-width: 500px) {
-  .map-form-section {
-    min-height: 350px;
 
-    .map-background {
-      height: 300px;
-    }
-  }
-
-  .formulaire-contact {
-    padding: 0.8rem;
-
-    h2 {
-      font-size: 1.3rem;
-    }
-
-    button {
-      width: 100%;
-      font-size: 1rem;
-      padding: 0.8rem;
-    }
-
-    .ligne-nom-prenom {
-      flex-direction: column;
-
-      input {
-        width: 100%;
-      }
-    }
-  }
-
-  }
  // 📉   statistiques   responsive
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .statistiques {
     flex-direction: column;
 
@@ -466,7 +445,7 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .logo-section,
   .breadcrumb {
     flex-direction: column;

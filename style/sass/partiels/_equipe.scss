@@ -30,7 +30,7 @@
       }
 
       img {
-        @include avatar-rond(100px); // Mixin pour image ronde avec taille personnalisée
+        @include avatar-rond(100px); 
       }
 
       h3 {

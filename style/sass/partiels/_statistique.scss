@@ -21,7 +21,7 @@
         margin-top: 20px;
 
         .gradient-circle {
-          @include cercle(300px);
+          @include cercle(400px);
           border: 1px solid $couleur-noir;
           background-image: conic-gradient($couleur-foncee 33%, $couleur-secondaire 0%);
           animation: rotateGradient 4s linear infinite;
@@ -36,7 +36,7 @@
   }
 
   .bloc-droit {
-    width: 50%;
+    width: 55%;
     @include flex(column);
     text-align: left;
     padding: 20px;
