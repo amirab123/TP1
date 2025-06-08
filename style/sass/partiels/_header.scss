@@ -16,6 +16,7 @@
 
 .header__logo {
     @extend %centre;
+    justify-content: center;
 }
 
 .header__logo-img {
