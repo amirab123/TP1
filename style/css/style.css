@@ -44,7 +44,7 @@
   gap: 20px;
 }
 
-.header__container, .header__logo, .navbar__link {
+.header__container, .navbar__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,6 +68,8 @@
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -77,6 +79,7 @@
 }
 
 .header__logo-titre {
+  text-align: center;
   font-size: 2em;
   margin-left: 15px;
   font-weight: bold;
@@ -380,7 +383,7 @@
 .galerie {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 130px;
+  grid-auto-rows: 150px;
   gap: 10px;
   padding: 20px;
   background-color: #f8f8f7;
@@ -392,7 +395,7 @@
 }
 .galerie .item1 {
   grid-column: 1/2;
-  grid-row: 3/5;
+  grid-row: 2/5;
 }
 .galerie .item2 {
   grid-column: span 3;
@@ -635,7 +638,7 @@
     width: 90%;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   header {
     padding: 15px 20px;
   }
@@ -673,7 +676,7 @@
     cursor: pointer;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .burger {
     display: block;
   }
@@ -729,7 +732,7 @@
     color: #287b14;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .cta-section .cta-container {
     padding: 30px 15px;
   }
@@ -767,7 +770,7 @@
     font-size: 1rem;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .cta-section .cta-container {
     padding: 20px 10px;
   }
@@ -794,7 +797,7 @@
     padding: 10px 0;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .section-avantages {
     padding: 3rem 1.5rem;
   }
@@ -829,7 +832,7 @@
     height: 3.5px;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .section-avantages {
     padding: 2rem 1rem;
   }
@@ -911,47 +914,42 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .equipe-section {
     padding: 2rem 1rem;
   }
   .equipe-section .equipe-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .equipe-section .equipe-container .membre {
+    border-right: 2px solid #959292;
+  }
+  .equipe-section .equipe-container .membre:nth-child(2n) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .equipe-section {
+    padding: 1.5rem 1rem;
+  }
+  .equipe-section .equipe-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .equipe-section .equipe-container .membre {
     border-right: none;
     text-align: center;
   }
   .equipe-section .equipe-container .membre img {
-    margin: 0 auto 1rem auto;
-  }
-  .equipe-section .equipe-container .membre .social-icons {
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  .equipe-section {
-    padding: 2rem 1rem;
-  }
-  .equipe-section .equipe-container {
-    grid-template-columns: 1fr;
-  }
-  .equipe-section .equipe-container .membre {
-    text-align: center;
-    border: 2px solid transparent;
-  }
-  .equipe-section .equipe-container .membre:nth-child(1), .equipe-section .equipe-container .membre:nth-child(2) {
-    border: none;
-  }
-  .equipe-section .equipe-container .membre img {
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 1rem;
   }
   .equipe-section .equipe-container .membre .social-icons {
     justify-content: center;
   }
 }
 /* 📩 RESPONSIVE – Écrans ≤ 700px */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .map-form-section {
     height: 400px;
   }
@@ -962,7 +960,7 @@
     padding: 0.8rem;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .map-form-section {
     height: 350px;
   }
@@ -1084,9 +1082,9 @@
     gap: 10px;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 500px) {
   footer {
-    background-color: #95f8cb;
+    background-color: #64e99d;
   }
 }
 @media (max-width: 500px) {
@@ -1245,11 +1243,11 @@ hr {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-.equipe-section .equipe-container .membre {
-  border-right: 3px solid #959292;
-}
 .equipe-section .equipe-container .membre:last-child {
   border-right: none;
+}
+.equipe-section .equipe-container .membre .membre:not(:nth-child(4n)) {
+  border-right: 2px solid #959292;
 }
 .equipe-section .equipe-container .membre img {
   width: 100px;

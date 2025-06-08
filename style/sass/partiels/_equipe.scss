@@ -1,7 +1,7 @@
 // Fichier : _equipe.scss
 
 @use 'variable' as *;
-@use 'mixins' as *;
+@use 'mixins' as  * ;
 @use 'placeholders' as *;
 
 .equipe-section {
@@ -22,8 +22,9 @@
     gap: 2rem;
 
     .membre {
+      
       @extend %carte-membre; 
-      border-right: 3px solid $gris-moyen;
+   
 
       &:last-child {
         border-right: none;

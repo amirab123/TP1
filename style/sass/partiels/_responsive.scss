@@ -18,7 +18,7 @@
 // ==============================
 
 // 🔽 Header  responsive
-@media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   header {
     padding: 15px 20px;
   }
@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
    .burger {
     display: block;
   }
@@ -137,7 +137,7 @@
 }
 
 
-@media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .cta-section {
     .cta-container {
       padding: 30px 15px;
@@ -186,7 +186,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .cta-section {
     .cta-container {
       padding: 20px 10px;
@@ -226,7 +226,7 @@
   }
 }
 // Pour écrans <= 768px
-@media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .section-avantages {
     padding: 3rem 1.5rem;
 
@@ -271,7 +271,7 @@
 }
 
 // Pour écrans <= 500px
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .section-avantages {
     padding: 2rem 1rem;
 
@@ -381,27 +381,50 @@
 // ==============================
 // 🌐 Responsive - section equipe
 // ==============================
+  // Media query pour tablettes et petits écrans (max 768px)
+@media screen and (max-width: 768px) {
+  .equipe-section {
+    padding: 2rem 1rem;
 
-@media (max-width: 768px) {
-  .equipe-container {
-    grid-template-columns: repeat(2, 1fr);
+    .equipe-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
 
-    .membre {
-      border-right: none;
+      .membre {
+        border-right: 2px solid $gris-bordure;
+
+  
+        &:nth-child(2n) {
+          border-right: none;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 500px) {
-  .equipe-container {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 500px) {
+  .equipe-section {
+    padding: 1.5rem 1rem;
 
-    .membre {
-      border-right: none;
+    .equipe-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+      .membre {
+        border-right: none;
+        text-align: center;
+
+        img {
+          margin: 0 auto 1rem;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      }
     }
   }
 }
-
 
 
 
@@ -411,7 +434,7 @@
 // 🔽 Map  responsive
   //  RESPONSIVE Map + Formulaire  POUR LES PETITS ÉCRANS 
 /* 📩 RESPONSIVE – Écrans ≤ 700px */
-@media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .map-form-section {
     height: 400px;
 
@@ -424,7 +447,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .map-form-section {
     height: 350px;
 
@@ -615,9 +638,9 @@
 }
 
 
- @media (max-width: 768px) {
+@media screen and (max-width: 500px) {
   footer {
-    background-color: #95f8cb; 
+    background-color: #64e99d; 
   }
 }
 
