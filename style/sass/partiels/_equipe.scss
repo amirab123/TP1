@@ -24,7 +24,7 @@
     .membre {
       
       @extend %carte-membre; 
-   
+      border-right: 2px solid $gris-bordure ;
 
       &:last-child {
         border-right: none;
@@ -64,5 +64,35 @@
         }
       }
     }
+  }
+}
+@mixin titre-section {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+@mixin intro-section {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  color: #666;
+}
+
+@mixin avatar-rond($size) {
+  width: $size;
+  height: $size;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+@mixin icone-sociale($size) {
+  width: $size !important;
+  height: $size !important;
+  display: inline-block;
+
+  &:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
   }
 }

@@ -64,13 +64,14 @@
 
 .header__container {
   justify-content: space-between;
-  position: relative;
+  padding: 0 1rem;
 }
 
 .header__logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 15px;
+  justify-content: flex-start;
 }
 
 .header__logo-img {
@@ -79,13 +80,12 @@
 }
 
 .header__logo-titre {
-  text-align: center;
   font-size: 2em;
-  margin-left: 15px;
   font-weight: bold;
+  text-align: left;
 }
 
-/* ===== Naviagation  ===== */
+/* Navigation */
 .navbar__list {
   list-style: none;
   display: flex;
@@ -93,6 +93,7 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease;
+  align-items: center;
 }
 
 .navbar__link {
@@ -106,9 +107,6 @@
 .navbar__link__icon-img {
   width: 20px;
 }
-.navbar__link__text {
-  text-decoration: none;
-}
 .navbar__link__text:hover {
   text-decoration: underline;
 }
@@ -117,7 +115,7 @@
   font-size: 0.9em;
 }
 
-/* ===== Menu Burger ===== */
+/* Burger menu */
 .burger {
   display: none;
   font-size: 2em;
@@ -328,7 +326,6 @@
 .section-avantages {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f5f5f5;
 }
 .section-avantages .titre-section {
   font-size: 3rem;
@@ -523,7 +520,7 @@
 .map-form-section {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
 }
 .map-form-section .map-background {
@@ -626,6 +623,72 @@
 }
 .formulaire-contact .champ-formulaire.success .errormessage {
   color: #09c372;
+}
+
+.equipe-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f8f7;
+  gap: 20px;
+}
+.equipe-section h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+.equipe-section .intro {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  color: #666;
+}
+.equipe-section .equipe-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.equipe-section .equipe-container .membre {
+  border-right: 2px solid #959292;
+}
+.equipe-section .equipe-container .membre:last-child {
+  border-right: none;
+}
+.equipe-section .equipe-container .membre img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.equipe-section .equipe-container .membre h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+.equipe-section .equipe-container .membre .poste {
+  font-style: italic;
+  color: #1c8d36;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.equipe-section .equipe-container .membre p {
+  font-size: 0.95rem;
+  color: #444;
+}
+.equipe-section .equipe-container .membre .social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin-top: 10px;
+}
+.equipe-section .equipe-container .membre .social-icons .icon-socials {
+  width: 24px !important;
+  height: 24px !important;
+  display: inline-block;
+}
+.equipe-section .equipe-container .membre .social-icons .icon-socials:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
 
 @media (max-width: 768px) {
@@ -914,69 +977,105 @@
   }
 }
 
+/* ============================
+   Media Queries
+   ============================ */
+/* TABLETTES - max-width: 768px */
+/* MOBILES - max-width: 500px */
 @media screen and (max-width: 768px) {
   .equipe-section {
     padding: 2rem 1rem;
   }
   .equipe-section .equipe-container {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  .equipe-section .equipe-container .membre {
-    border-right: 2px solid #959292;
-  }
-  .equipe-section .equipe-container .membre:nth-child(2n) {
-    border-right: none;
-  }
-}
-@media screen and (max-width: 500px) {
-  .equipe-section {
-    padding: 1.5rem 1rem;
-  }
-  .equipe-section .equipe-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
   .equipe-section .equipe-container .membre {
     border-right: none;
     text-align: center;
   }
   .equipe-section .equipe-container .membre img {
-    margin: 0 auto 1rem;
+    margin: 0 auto 1rem auto;
+  }
+  .equipe-section .equipe-container .membre .social-icons {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .equipe-section {
+    padding: 2rem 1rem;
+  }
+  .equipe-section .equipe-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .equipe-section .equipe-container .membre {
+    text-align: center;
+    border: 2px solid transparent;
+  }
+  .equipe-section .equipe-container .membre:nth-child(1), .equipe-section .equipe-container .membre:nth-child(2) {
+    border: none;
+  }
+  .equipe-section .equipe-container .membre img {
+    margin: 0 auto 1rem auto;
   }
   .equipe-section .equipe-container .membre .social-icons {
     justify-content: center;
   }
 }
 /* 📩 RESPONSIVE – Écrans ≤ 700px */
+/* Media queries */
 @media screen and (max-width: 768px) {
-  .map-form-section {
-    height: 400px;
-  }
-  .map-form-section .formulaire-contact {
+  .formulaire-contact {
     max-width: 400px;
-    margin-right: 1rem;
-    top: 55%;
-    padding: 0.8rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
-}
-@media screen and (max-width: 500px) {
-  .map-form-section {
-    height: 350px;
+  .formulaire-contact h2 {
+    font-size: 1.2rem;
   }
-  .map-form-section .formulaire-contact {
-    max-width: 100%;
-    margin: 0 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0.6rem;
+  .formulaire-contact input,
+  .formulaire-contact textarea {
+    font-size: 12px;
+    padding: 6px;
+    width: 100%;
   }
-  .map-form-section .formulaire-contact .ligne-nom-prenom {
+  .formulaire-contact button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .formulaire-contact .ligne-nom-prenom {
     flex-direction: column;
     gap: 0.5rem;
   }
-  .map-form-section .formulaire-contact .ligne-nom-prenom input {
+  .formulaire-contact .ligne-nom-prenom .champ-formulaire {
     width: 100%;
+  }
+  .formulaire-contact .ligne-nom-prenom input {
+    width: 100%;
+  }
+  .formulaire-contact .map-form-section {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  .formulaire-contact .map-background {
+    filter: brightness(0.6);
+  }
+}
+@media (max-width: 500px) {
+  .formulaire-contact {
+    display: none;
+  }
+  .map-form-section {
+    height: 100vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1213,79 +1312,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr {
-  background-color: #000;
+  background-color: #328E6E;
 }
 
 .container hr {
   border: none;
-  border-top: 1px solid #000;
+  border-top: 1px solid #328E6E;
   margin: 3rem 0;
-}
-
-.equipe-section {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #f8f8f7;
-  gap: 20px;
-}
-.equipe-section h2 {
-  font-size: 2rem;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-}
-.equipe-section .intro {
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
-  color: #666;
-}
-.equipe-section .equipe-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-.equipe-section .equipe-container .membre:last-child {
-  border-right: none;
-}
-.equipe-section .equipe-container .membre .membre:not(:nth-child(4n)) {
-  border-right: 2px solid #959292;
-}
-.equipe-section .equipe-container .membre img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-.equipe-section .equipe-container .membre h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-.equipe-section .equipe-container .membre .poste {
-  font-style: italic;
-  color: #1c8d36;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-}
-.equipe-section .equipe-container .membre p {
-  font-size: 0.95rem;
-  color: #444;
-}
-.equipe-section .equipe-container .membre .social-icons {
-  display: flex;
-  justify-content: left;
-  gap: 15px;
-  margin-top: 10px;
-}
-.equipe-section .equipe-container .membre .social-icons .icon-socials {
-  width: 24px !important;
-  height: 24px !important;
-  display: inline-block;
-}
-.equipe-section .equipe-container .membre .social-icons .icon-socials:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
 }
 
 .logo-s {

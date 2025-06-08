@@ -1,5 +1,5 @@
-@use  'variable' as *;
-@use 'mixins' as * ;
+@use 'variable' as *;
+@use 'mixins' as *;
 @use 'placeholders';
 
 .header {
@@ -9,14 +9,16 @@
 }
 
 .header__container {
-  @extend %centre;
-  justify-content: space-between;
-  position: relative;
+  @extend %centre;         
+  justify-content: space-between; 
+  padding: 0 1rem;        
 }
 
 .header__logo {
-   @include flex-center;
-
+  display: flex;
+  align-items: center;      
+  gap: 15px;               
+  justify-content: flex-start; 
 }
 
 .header__logo-img {
@@ -25,13 +27,13 @@
 }
 
 .header__logo-titre {
-  text-align: center;
   font-size: $texte-size;
-  margin-left: 15px;
   font-weight: bold;
+  text-align: left;
 }
 
-/* ===== Naviagation  ===== */
+/* Navigation */
+
 .navbar__list {
   list-style: none;
   display: flex;
@@ -39,23 +41,23 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease;
+  align-items: center;       // aligner les liens verticalement
 }
 
 .navbar__link {
-    @extend %centre;
+  @extend %centre;
   gap: 8px;
   color: $couleur-blanc;
   text-decoration: none;
   padding: 0 15px;
   font-size: $font-size-nav;
-font-weight:bold;
+  font-weight: bold;
+
   &__icon-img {
-    width: 20px;  
+    width: 20px;
   }
 
   &__text {
-    text-decoration: none;
-
     &:hover {
       text-decoration: underline;
     }
@@ -67,11 +69,11 @@ font-weight:bold;
   }
 }
 
-/* ===== Menu Burger ===== */
+/* Burger menu */
+
 .burger {
   display: none;
   font-size: 2em;
   color: $couleur-blanc;
   cursor: pointer;
-
 }
