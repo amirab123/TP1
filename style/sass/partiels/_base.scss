@@ -18,7 +18,7 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-
+ font-family: $font-secondaire;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -42,5 +42,7 @@ hr {
 
 .container hr {
   border: none;
-  margin: 2rem 0;  
+  border-top: 1px solid #000;
+  margin: 3rem 0;  
 }
+

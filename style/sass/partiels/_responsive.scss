@@ -382,59 +382,25 @@
 // 🌐 Responsive - section equipe
 // ==============================
 
-
 @media (max-width: 768px) {
-  .equipe-section {
-    padding: 2rem 1rem;
+  .equipe-container {
+    grid-template-columns: repeat(2, 1fr);
 
-    .equipe-container {
-      grid-template-columns: repeat(2, 1fr);
-
-      .membre {
-        border-right: none;
-        text-align: center;
-
-        img {
-          margin: 0 auto 1rem auto;
-        }
-
-        .social-icons {
-          justify-content: center;
-        }
-      }
+    .membre {
+      border-right: none;
     }
   }
 }
 
+@media (max-width: 500px) {
+  .equipe-container {
+    grid-template-columns: 1fr;
 
-@media screen and (max-width: 500px) {
-  .equipe-section {
-    padding: 2rem 1rem;
-
-    .equipe-container {
-      grid-template-columns: 1fr;
-
-      .membre {
-        text-align: center;
-        border: 2px solid transparent;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-          border: none;
-        }
-
-        img {
-          margin: 0 auto 1rem auto;
-        }
-
-        .social-icons {
-          justify-content: center;
-        }
-      }
+    .membre {
+      border-right: none;
     }
   }
 }
-
 
 
 
