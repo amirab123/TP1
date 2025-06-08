@@ -72,35 +72,34 @@
     }
   }
 
+
+  
   .arrows {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 95%;
-    padding: 0 15px;
+    right: 0;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
     z-index: 2;
     pointer-events: none;
-    gap: 20px;
-
     .arrow {
       pointer-events: all;
       @extend %flex-centre;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       font-size: 2rem;
-      background: $gris-translucide;
-      color: $couleur-blanc;
-      padding: 10px;
+      background: $couleur-blanc;
+      color: $couleur-principale;
+      padding: 5px;
       border-radius: 50%;
       cursor: pointer;
       user-select: none;
       transition: all 0.15s ease;
 
       &:hover {
-        background: $noir-translucide;
+        background: $gris-moyen;
       }
     }
   }

@@ -7,10 +7,60 @@
     width: 95%;
   }
 }
+@media (max-width: 500px) {
+  .container {
+    width: 90%; 
+  }
+}
 
 // ==============================
 // 🌐 Responsive - Navigation
 // ==============================
+
+// 🔽 Header  responsive
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .header__logo-img {
+    height: 60px; 
+  }
+
+  .header__logo-titre {
+    font-size: 1.3rem;
+    margin-left: 10px;
+  }
+
+  .navbar__list {
+    display: none; 
+    flex-direction: column;
+    background-color: $couleur-principale;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .burger {
+    display: block; 
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+}
 
 @media (max-width: 500px) {
    .burger {
@@ -39,11 +89,12 @@
 }
 
 
+// 🔽 slider responsive
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .slider {
-    height: 400px;
+    height: 400px; 
 
     .slide img {
       width: 90%;
@@ -51,14 +102,13 @@
     }
 
     .arrows {
-      width: 100%;
       padding: 0 10px;
 
       .arrow {
-        font-size: 1.5rem;
-        width: 25px;
-        height: 25px;
-        padding: 8px;
+        font-size: 2.2rem;
+        width: 45px;
+        height: 45px;
+        padding: 6px;
       }
     }
 
@@ -69,126 +119,208 @@
   }
 }
 
-@media (max-width: 500px) {
+
+@media screen and (max-width: 500px) {
   .slider {
-    height: 300px;
+    .arrows {
+      padding: 0 10px;
 
-    .slide img {
-      width: 95%;
-      height: auto;
-    }
-
-    .arrows .arrow {
-      font-size: 1.2rem;
-      width: 22px;
-      height: 22px;
-      padding: 6px;
-    }
-
-    .dots {
-      bottom: 10px;
-
-      label {
-        width: 10px;
-        height: 10px;
+      .arrow {
+        font-size: 2rem;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        color: #287b14;
       }
     }
   }
 }
 
 
-
-
-
-// ==============================
-// 🌐 Responsive - section equipe 
-// ==============================
-
- .equipe-section {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #f8f8f7;
-  gap: 20px;
-
-  h2 {
-    font-size: 2rem;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-  }
-
-  .intro {
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-    color: #666;
-  }
-
-  .equipe-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-
-    .membre {
-      padding: 1rem;
-      border-right: 2px solid #959292;
-      text-align: left;
-      margin-bottom: 20px;
-
-      &:last-child {
-        border-right: none;
-      }
-
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-      }
-
-      h3 {
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
-        color: #333;
-      }
-
-      .poste {
-        font-style: italic;
-        color: #287b14;
-        font-size: 1rem;
-        font-weight: bolder;
-        margin-bottom: 0.8rem;
-      }
+@media (max-width: 768px) {
+  .cta-section {
+    .cta-container {
+      padding: 30px 15px;
 
       p {
-        font-size: 0.95rem;
-        color: #444;
+        font-size: 13px;
+        max-width: 90%;
       }
 
-      .social-icons {
-        display: flex;
-        justify-content: left;
-        gap: 15px;
-        margin-top: 10px;
+      .cta-input {
+        flex-direction: column;
 
-        .icon-socials {
-          width: 24px !important;
-          height: 24px !important;
-          max-width: none;
-          max-height: none;
-          margin: 0;
-          padding: 0;
-          border: none;
-          display: inline-block;
+        .champ-formulaire {
+          width: 100%;
+          margin-bottom: 0.8rem;
 
-          &:hover {
-            transform: scale(1.2);
-            filter: brightness(1.2);
+          input {
+            font-size: 0.9rem;
           }
+        }
+
+        button.btn {
+          width: 100%;
+          padding: 0.7rem;
+          font-size: 1rem;
         }
       }
     }
+
+    .cta-btn {
+      padding: 30px 20px;
+      flex-direction: column;
+      gap: 15px;
+
+      .cta-sketch img {
+        width: 250px;
+        height: auto;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1rem;
+      }
+    }
   }
 }
+
+@media (max-width: 500px) {
+  .cta-section {
+    .cta-container {
+      padding: 20px 10px;
+
+      p {
+        font-size: 12px;
+        max-width: 100%;
+      }
+
+      .cta-input {
+        .champ-formulaire {
+          input {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+          }
+        }
+
+        button.btn {
+          font-size: 0.9rem;
+          padding: 0.6rem;
+        }
+      }
+    }
+
+    .cta-btn {
+      padding: 20px 10px;
+
+      .cta-sketch img {
+        width: 200px;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+// Pour écrans <= 768px
+@media (max-width: 768px) {
+  .section-avantages {
+    padding: 3rem 1.5rem;
+
+    .titre-section {
+      font-size: 2.5rem;
+    }
+
+    .intro-section {
+      font-size: 1.1rem;
+      max-width: 90%;
+      margin-bottom: 2.5rem;
+    }
+
+    .cartes {
+      gap: 1.5rem;
+
+      .carte {
+        max-width: 250px;
+        padding: 1.8rem;
+
+        .icone {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 0.9rem;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    hr {
+      width: 70px;
+      height: 3.5px;
+    }
+  }
+}
+
+// Pour écrans <= 500px
+@media (max-width: 500px) {
+  .section-avantages {
+    padding: 2rem 1rem;
+
+    .titre-section {
+      font-size: 2rem;
+    }
+
+    .intro-section {
+      font-size: 1rem;
+      max-width: 100%;
+      margin-bottom: 2rem;
+      padding: 0 0.5rem;
+    }
+
+    .cartes {
+      flex-direction: column;
+      gap: 1rem;
+
+      .carte {
+        max-width: 100%;
+        padding: 1.5rem;
+
+        &:hover {
+          transform: none; // Désactive l’effet hover sur mobile
+        }
+
+        .icone {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 0.75rem;
+        }
+
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    hr {
+      width: 60px;
+      height: 3px;
+    }
+  }
+}
+
 
 
 
@@ -197,7 +329,7 @@
 // ==============================
 
 .galerie {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 180px;
     gap: 10px;
@@ -221,7 +353,7 @@
       }
     }
   }
-  // --- Responsive pour écran jusqu'à 700px ---
+  // --- Responsive pour écran jusqu'à 500px ---
   @media screen and (max-width: 500px) {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 150px;
@@ -250,7 +382,7 @@
 // 🌐 Responsive - section equipe
 // ==============================
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .equipe-section {
     padding: 2rem 1rem;
 
@@ -308,39 +440,49 @@
 
 
 
-
+// 🔽 Map  responsive
   //  RESPONSIVE Map + Formulaire  POUR LES PETITS ÉCRANS 
 /* 📩 RESPONSIVE – Écrans ≤ 700px */
 @media (max-width: 768px) {
-    .formulaire-contact {
-      padding: 1rem;
+  .map-form-section {
+    height: 400px;
 
-      form {
-        .ligne-nom-prenom {
-          flex-direction: column;
+    .formulaire-contact {
+      max-width: 400px;
+      margin-right: 1rem;
+      top: 55%;
+      padding: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .map-form-section {
+    height: 350px;
+
+    .formulaire-contact {
+      max-width: 100%;
+      margin: 0 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0.6rem;
+
+      .ligne-nom-prenom {
+        flex-direction: column;
+        gap: 0.5rem;
+
+        input {
+          width: 100%;
         }
       }
     }
   }
-
-  // Très petit écran
-  @media (max-width: 500px) {
-    .formulaire-contact {
-      padding: 1rem;
-    }
-
-    .formulaire-contact h2 {
-      font-size: 0.9rem;
-    }
-
-    .formulaire-contact p {
-      font-size: 0.8rem;
-    }
-  }
+}
 
 
 
-// 🔽 Map  responsive
+
+
 
  // 📉   statistiques   responsive
 @media screen and (max-width: 768px) {
@@ -505,25 +647,11 @@
 }
 
 
- @media (max-width: 700px) {
-    .footer-top {
-      flex-direction: column;
-      align-items: flex-start;
-
-      .author,
-      .social-media,
-      .footer-bottom-right {
-        flex: none;
-        width: 100%;
-        text-align: left !important;
-        margin-bottom: 10px;
-      }
-
-      .footer-bottom-right {
-        text-align: left !important;
-      }
-    }
+ @media (max-width: 768px) {
+  footer {
+    background-color: #95f8cb; 
   }
+}
 
   @media (max-width: 500px) {
     

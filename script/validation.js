@@ -197,3 +197,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+  document.querySelectorAll('.arrow').forEach((arrow) => {
+    arrow.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); 
+        arrow.click(); // simule un clic
+      }
+    });
+  });
+//logo 
+  const logo = document.querySelector('.logo-s');
+logo.addEventListener('click', () => {
+  logo.classList.toggle('active');
+});
