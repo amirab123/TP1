@@ -67,6 +67,10 @@
   position: relative;
 }
 
+.header__logo {
+  justify-content: center;
+}
+
 .header__logo-img {
   height: 70px;
   width: auto;
@@ -1198,7 +1202,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -1291,7 +1294,7 @@ hr {
   cursor: pointer;
 }
 .logo-s.active {
-  border-color: #959292;
+  border-color: #328E6E;
   animation: changementCouleur 0.5s forwards;
 }
 
@@ -1310,6 +1313,6 @@ hr {
     border-color: #959292;
   }
   to {
-    border-color: #959292;
+    border-color: #328E6E;
   }
 }

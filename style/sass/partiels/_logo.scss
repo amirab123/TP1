@@ -6,7 +6,7 @@
   cursor: pointer;
 
   &.active {
-    border-color: $border-color; 
+    border-color: $couleur-principale; 
     animation: changementCouleur 0.5s forwards;
   }
 }
@@ -27,6 +27,6 @@
     border-color: $border-color;
   }
   to {
-    border-color: $border-color ; 
+    border-color: $couleur-principale ; 
   }
 }
