@@ -320,7 +320,7 @@
   border: 2px solid #169976;
   padding: 12px 24px;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 900;
   font-size: medium;
   cursor: pointer;
   opacity: 1;
@@ -503,6 +503,7 @@
   margin-top: 10px;
   background-color: #328E6E;
   color: #ffffff;
+  font-weight: bold;
 }
 .statistiques .bloc-droit .statistique-texte .statistiques-flex .stat .btn:hover {
   background-color: #09c372;
@@ -669,7 +670,7 @@
 }
 .equipe-section .equipe-container .membre .poste {
   font-style: italic;
-  color: #1c8d36;
+  color: #287b14;
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.8rem;
