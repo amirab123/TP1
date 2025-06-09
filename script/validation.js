@@ -29,12 +29,12 @@ const msg = document.getElementById("message");
           if (nomValue === "") {
               setError(nom, 'nom  est requis ');
             
-              noError=false; // Arrête l'envoi du formulaire
+              noError=false; 
           } 
       
           else if (isNameTooLong(nomValue)) {
               setError(nom, 'Le nom est trop long !');
-              noError = false; // Arrête l'envoi du formulaire
+              noError = false;
           }
           else {
               setSuccess(nom);
@@ -128,16 +128,11 @@ const isMessageTooLong = message => {
 const burger = document.getElementById('burger');
   const navMenu = document.getElementById('navMenu');
 
-
- 
-
-
-
-
   burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 
-
+ const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+  burger.setAttribute('aria-expanded', !isExpanded);
 
 
   });

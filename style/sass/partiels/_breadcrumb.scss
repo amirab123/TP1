@@ -4,6 +4,7 @@
 @use 'placeholders';
 .logo-section,
 .breadcrumb {
+  
   @extend %section-centree;
 }
 
@@ -25,5 +26,20 @@
 
   a {
     @include lien-style();
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: $couleur-principale;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }

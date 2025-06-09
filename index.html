@@ -22,7 +22,7 @@
 
 
       <nav class="navbar">
-        <div class="burger" id="burger" >☰</div>
+        <div class="burger" id="burger"  aria-label="Menu" aria-expanded="false" >☰</div>
         <ul class="navbar__list" id="navMenu">
          <li>
       <a href="#accueil" class="navbar__link">
@@ -33,9 +33,14 @@
         <span class="navbar__link__arrow">▼</span>
       </a>
     </li>
-          <li class="navbar__item"><a href="#activites " class="navbar__link">      <span class="navbar__link__icon">
+          <li class="navbar__item">
+            <a href="#activites" class="navbar__link">    
+                <span class="navbar__link__icon">
           <img src="img/shape.png" alt="Icône" class="navbar__link__icon-img">
-        </span>     <span class="navbar__link__text"> Nos Activités </span> <span class="navbar__link__arrow">▼</span></a></li>
+        </span>     <span class="navbar__link__text">Nos Activités</span> 
+        <span class="navbar__link__arrow">▼</span>
+      </a>
+    </li>
           <li class="navbar__item"><a href="#inscription" class="navbar__link">  <span class="navbar__link__icon">
           <img src="img/shape.png" alt="Icône Accueil" class="navbar__link__icon-img">
         </span>    <span class="navbar__link__text"> Inscription </span> </a></li>
@@ -114,8 +119,8 @@
       placeholder="Rechercher une activité" 
       aria-label="Recherche" 
       required 
-      tabindex="0"
-    >
+      tabindex="0"  >
+  
 
    
     <div 
@@ -359,9 +364,9 @@
 
  
 </div>
-  </main>
+ </main>
   <hr class="container hr-footer">
-
+ 
  <!-- Footer -->
 <footer class="container">
   <div class="footer-top">
@@ -383,7 +388,7 @@
     </div>
     <div class="footer-bottom-right">
       <img src="img/phone-call.png" alt="telephone">
-      <span><a href="tecd+100000000">(+1)000-000-000</a></span>
+      <span><a href="tecd+100000000">(+1) 000-000-000</a></span>
       <img src="img/email.png" alt="email">
       <span><a href="mailto:Cégep@s.ca">Cégep@trois-rivières.ca </a></span>
     </div>
