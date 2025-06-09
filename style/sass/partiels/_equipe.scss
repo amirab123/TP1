@@ -37,7 +37,7 @@
       h3 {
         margin: 0.5rem 0;
         font-size: 1.2rem;
-        color: $texte-fonce;
+        color: $texte-principal;
       }
 
       .poste {
@@ -68,14 +68,14 @@
 }
 @mixin titre-section {
   font-size: 2rem;
-  color: #1a1a1a;
+  color: $texte-titre;
   margin-bottom: 1rem;
 }
 
 @mixin intro-section {
   max-width: 600px;
   margin: 0 auto 3rem auto;
-  color: #666;
+  color: $texte-secondaire;
 }
 
 @mixin avatar-rond($size) {

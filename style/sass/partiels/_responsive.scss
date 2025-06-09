@@ -611,22 +611,31 @@
 
 @media screen and (max-width: 500px) {
   .statistiques {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+
+    > * {
+      margin-bottom: 1rem;
+    }
 
     .bloc-droit {
       .statistique-texte {
         h2 {
-          font-size: 18px;
+          font-size: 1.125rem;
         }
 
         p, .sous-texte {
-          font-size: 12px;
+          font-size: 0.75rem;
         }
 
         .statistiques-flex {
+          flex-direction: column;
+          gap: 1rem;
+
           .stat {
             h2 {
-              font-size: 1.5rem;
+              font-size: 1.3rem;
             }
 
             p {
@@ -644,11 +653,13 @@
 
     .statistique-figure {
       .bloc-gauche {
+        padding: 0.625rem;
+
         .gradient-section {
           .gradient-circle {
             width: 150px;
             height: 150px;
-            font-size: 16px;
+            font-size: 1rem;
           }
         }
       }
